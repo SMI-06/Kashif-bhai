@@ -1,0 +1,44 @@
+[
+  {
+    "badge": "Starter",
+    "name": "Launch",
+    "description": "For early-stage brands that need a strong digital foundation.",
+    "price": "$899",
+    "featured": false,
+    "button": "Choose Launch",
+    "features": [
+      "Strategy workshop",
+      "One core channel",
+      "Monthly reporting",
+      "Email support"
+    ]
+  },
+  {
+    "badge": "Most Popular",
+    "name": "Growth",
+    "description": "For teams ready to scale acquisition and improve conversion.",
+    "price": "$1,799",
+    "featured": true,
+    "button": "Choose Growth",
+    "features": [
+      "Multi-channel campaigns",
+      "Landing page support",
+      "Bi-weekly optimization",
+      "Priority support"
+    ]
+  },
+  {
+    "badge": "Advanced",
+    "name": "Scale",
+    "description": "For established brands needing a full-funnel performance partner.",
+    "price": "$3,499",
+    "featured": false,
+    "button": "Choose Scale",
+    "features": [
+      "Full-funnel strategy",
+      "Advanced analytics",
+      "Creative testing framework",
+      "Dedicated strategist"
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Ecommerce Revenue Lift",
+    "category": "Paid Media",
+    "description": "Rebuilt the acquisition funnel for a lifestyle brand and aligned creatives with high-intent audience segments.",
+    "tags": [
+      "Meta Ads",
+      "Creative Testing",
+      "Landing Pages"
+    ],
+    "result": "Revenue increased by 168 percent in 90 days.",
+    "image": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "title": "B2B Lead Generation Engine",
+    "category": "Lead Gen",
+    "description": "Designed a full-funnel content and paid search system for a B2B software provider entering new markets.",
+    "tags": [
+      "SEO",
+      "Google Ads",
+      "CRM Automation"
+    ],
+    "result": "Qualified leads improved by 214 percent.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "title": "Corporate Website Relaunch",
+    "category": "Web Design",
+    "description": "Delivered a premium corporate website with clearer positioning, stronger UX, and conversion-focused messaging.",
+    "tags": [
+      "UI Design",
+      "Development",
+      "CRO"
+    ],
+    "result": "Bounce rate reduced by 41 percent.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+  }
+]

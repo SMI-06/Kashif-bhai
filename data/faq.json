@@ -1,0 +1,18 @@
+[
+  {
+    "question": "How quickly can we get started?",
+    "answer": "Most projects start within one to two weeks depending on scope, approvals, and any required onboarding access."
+  },
+  {
+    "question": "Do you work with small businesses and startups?",
+    "answer": "Yes. We support startups, local service brands, ecommerce teams, and established companies that want a sharper digital growth system."
+  },
+  {
+    "question": "Can you integrate with our existing tools?",
+    "answer": "Yes. We can work with your CRM, analytics stack, forms, ad platforms, and reporting tools as part of the implementation."
+  },
+  {
+    "question": "Is the contact form backend-ready?",
+    "answer": "Yes. The form includes validation, loading state, and AJAX submission logic, and can be pointed to your preferred backend endpoint."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "icon": "\ud83d\udd0e",
+    "title": "SEO & Content Strategy",
+    "description": "Technical SEO, content planning, on-page optimization, and authority building designed to grow qualified traffic.",
+    "points": [
+      "Keyword strategy",
+      "Technical audits",
+      "Content roadmaps"
+    ]
+  },
+  {
+    "icon": "\ud83d\udce3",
+    "title": "Paid Media Management",
+    "description": "Performance marketing across Google, Meta, and high-intent channels with strong creative testing and reporting.",
+    "points": [
+      "Google Ads",
+      "Meta campaigns",
+      "Landing page alignment"
+    ]
+  },
+  {
+    "icon": "\ud83c\udfa8",
+    "title": "Branding & Creative",
+    "description": "Modern visual identity systems, ad creatives, and website assets that improve trust and conversion.",
+    "points": [
+      "Ad creative systems",
+      "Brand refresh",
+      "Campaign design"
+    ]
+  },
+  {
+    "icon": "\ud83d\udcbb",
+    "title": "Website Design & Development",
+    "description": "Responsive websites and high-converting landing pages optimized for speed, UX, and measurable action.",
+    "points": [
+      "Landing pages",
+      "UI systems",
+      "Speed optimization"
+    ]
+  },
+  {
+    "icon": "\u2699",
+    "title": "Automation & CRM Workflows",
+    "description": "Lead routing, lifecycle automation, and CRM integration that reduce leakage and improve follow-up speed.",
+    "points": [
+      "Lead nurturing",
+      "CRM setup",
+      "Workflow automation"
+    ]
+  },
+  {
+    "icon": "\ud83d\udcc8",
+    "title": "Analytics & Conversion Optimization",
+    "description": "Tracking, dashboards, and CRO experiments that show where growth is coming from and how to improve it.",
+    "points": [
+      "GA4 tracking",
+      "Heatmaps and testing",
+      "Funnel optimization"
+    ]
+  }
+]

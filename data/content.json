@@ -1,0 +1,416 @@
+{
+  "navbar": {
+    "items": [
+      {
+        "label": "Home",
+        "target": "index.html"
+      },
+      {
+        "label": "About",
+        "target": "about.html"
+      },
+      {
+        "label": "Services",
+        "target": "services.html"
+      },
+      {
+        "label": "Portfolio",
+        "target": "portfolio.html"
+      },
+      {
+        "label": "Contact",
+        "target": "contact.html"
+      }
+    ],
+    "buttonText": "Start a Project"
+  },
+  "hero": {
+    "badge": "Performance-Driven Creative Agency",
+    "titlePrefix": "We build",
+    "typingWords": [
+      "Vision",
+      "Growth",
+      "Results"
+    ],
+    "description": "K-Online Agency helps modern businesses scale through strategy, branding, paid media, SEO, automation, and conversion-focused digital experiences.",
+    "primaryButton": "Book Free Consultation",
+    "secondaryButton": "View Our Work",
+    "stats": [
+      {
+        "value": 250,
+        "label": "Projects Delivered"
+      },
+      {
+        "value": 98,
+        "label": "Client Retention"
+      },
+      {
+        "value": 180,
+        "label": "Growth Campaigns"
+      }
+    ],
+    "cards": [
+      {
+        "icon": "bi bi-bar-chart-line",
+        "title": "Growth Strategy",
+        "text": "Data-backed planning for measurable performance."
+      },
+      {
+        "icon": "bi bi-badge-ad",
+        "title": "Paid Media",
+        "text": "Multi-channel ad campaigns with real ROI tracking."
+      },
+      {
+        "icon": "bi bi-search",
+        "title": "SEO Visibility",
+        "text": "Rank higher and attract your best-fit buyers organically."
+      },
+      {
+        "icon": "bi bi-palette",
+        "title": "Brand Systems",
+        "text": "Premium design that creates trust and recognition."
+      }
+    ]
+  },
+  "about": {
+    "subtitle": "About Us",
+    "title": "We turn attention into revenue with strategy, creativity, and execution.",
+    "description": "Our team blends marketing strategy, design excellence, content systems, and analytics to help brands grow faster with less guesswork.",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+    "points": [
+      "Transparent reporting and measurable KPIs",
+      "Dedicated strategists, creatives, and media buyers",
+      "Custom growth roadmaps for each client",
+      "Scalable execution for startups and established brands"
+    ],
+    "button": "Explore Services"
+  },
+  "services": {
+    "subtitle": "Our Services",
+    "title": "Complete digital growth solutions under one roof.",
+    "description": "From positioning to performance marketing, we build systems that move prospects through the funnel and convert them into customers.",
+    "items": [
+      {
+        "icon": "bi bi-megaphone",
+        "title": "Digital Marketing",
+        "description": "Campaign planning, media buying, and optimization across Meta, Google, and more."
+      },
+      {
+        "icon": "bi bi-search-heart",
+        "title": "SEO & Content",
+        "description": "Search strategy, content clusters, technical SEO, and authority-building campaigns."
+      },
+      {
+        "icon": "bi bi-vector-pen",
+        "title": "Brand Identity",
+        "description": "Naming, messaging, visual identity, and positioning built for long-term recognition."
+      },
+      {
+        "icon": "bi bi-window-stack",
+        "title": "Web Design",
+        "description": "Responsive landing pages and websites designed to convert visitors into qualified leads."
+      },
+      {
+        "icon": "bi bi-graph-up-arrow",
+        "title": "Analytics & CRO",
+        "description": "Behavior analysis, funnel audits, A/B testing, and conversion optimization."
+      },
+      {
+        "icon": "bi bi-robot",
+        "title": "Automation",
+        "description": "CRM workflows, lead nurturing, email journeys, and marketing automation systems."
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "subtitle": "Why Choose Us",
+    "title": "A premium partner focused on performance and trust.",
+    "description": "We combine strategic thinking with hands-on execution to deliver faster growth without the agency fluff.",
+    "items": [
+      {
+        "icon": "bi bi-lightning-charge",
+        "title": "Fast Execution",
+        "description": "Lean processes, rapid launch cycles, and quick optimization loops keep momentum high."
+      },
+      {
+        "icon": "bi bi-shield-check",
+        "title": "Reliable Delivery",
+        "description": "Clear timelines, proactive communication, and a disciplined project workflow."
+      },
+      {
+        "icon": "bi bi-people",
+        "title": "Senior Team",
+        "description": "You work with experienced specialists across strategy, creative, and performance."
+      },
+      {
+        "icon": "bi bi-bullseye",
+        "title": "KPI Focused",
+        "description": "We align every campaign and asset to pipeline, lead quality, and revenue outcomes."
+      }
+    ]
+  },
+  "portfolio": {
+    "subtitle": "Portfolio",
+    "title": "Selected work that shows our thinking and impact.",
+    "description": "A quick look at the type of digital experiences and growth campaigns we deliver for ambitious brands.",
+    "items": [
+      {
+        "category": "Branding",
+        "title": "NovaTech Rebrand",
+        "description": "Modern brand refresh and messaging strategy that improved positioning in a competitive SaaS market.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+        "link": "#"
+      },
+      {
+        "category": "Performance Marketing",
+        "title": "FitFuel Campaign",
+        "description": "Paid social and conversion funnel optimization that increased qualified leads and lowered CAC.",
+        "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1200&q=80",
+        "link": "#"
+      },
+      {
+        "category": "Web Experience",
+        "title": "UrbanSpace Landing System",
+        "description": "High-converting landing page system with compelling messaging and fast UX performance.",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+        "link": "#"
+      }
+    ]
+  },
+  "testimonials": {
+    "subtitle": "Testimonials",
+    "title": "What clients say after working with us.",
+    "description": "We focus on long-term partnerships and measurable outcomes, and that reflects in the feedback we receive.",
+    "items": [
+      {
+        "name": "Sophia Reed",
+        "role": "Marketing Director, NovaTech",
+        "quote": "K-Online Agency helped us sharpen our positioning and launch campaigns that immediately improved lead quality.",
+        "rating": 5,
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "name": "Ethan Cole",
+        "role": "Founder, FitFuel",
+        "quote": "The team moved fast, communicated clearly, and built a campaign system that finally made our ad spend efficient.",
+        "rating": 5,
+        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "name": "Maya Bennett",
+        "role": "COO, UrbanSpace",
+        "quote": "From brand story to landing page execution, every detail felt premium and conversion-focused.",
+        "rating": 5,
+        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  },
+  "team": {
+    "subtitle": "Our Team",
+    "title": "Strategists, creatives, and analysts working as one growth unit.",
+    "description": "We bring together specialists across key disciplines so every campaign is both creative and commercially sharp.",
+    "members": [
+      {
+        "name": "Kevin Rahman",
+        "role": "Founder & Strategy Lead",
+        "bio": "Leads positioning, growth strategy, and client success.",
+        "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+        "socials": [
+          {
+            "icon": "bi bi-linkedin",
+            "url": "#"
+          },
+          {
+            "icon": "bi bi-twitter-x",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "Lisa Morgan",
+        "role": "Creative Director",
+        "bio": "Owns brand systems, content direction, and visual storytelling.",
+        "image": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=400&q=80",
+        "socials": [
+          {
+            "icon": "bi bi-linkedin",
+            "url": "#"
+          },
+          {
+            "icon": "bi bi-dribbble",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "Daniel Cruz",
+        "role": "Performance Marketer",
+        "bio": "Manages ad campaigns, tracking, and optimization frameworks.",
+        "image": "https://images.unsplash.com/photo-1502767089025-6572583495b0?auto=format&fit=crop&w=400&q=80",
+        "socials": [
+          {
+            "icon": "bi bi-linkedin",
+            "url": "#"
+          },
+          {
+            "icon": "bi bi-facebook",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "Ava Brooks",
+        "role": "SEO & Analytics Specialist",
+        "bio": "Builds visibility strategies and reporting systems that drive decisions.",
+        "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+        "socials": [
+          {
+            "icon": "bi bi-linkedin",
+            "url": "#"
+          },
+          {
+            "icon": "bi bi-instagram",
+            "url": "#"
+          }
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Pricing Plans",
+    "title": "Flexible packages for every stage of growth.",
+    "description": "Choose a package that matches your current goals, then scale up as your acquisition engine grows.",
+    "plans": [
+      {
+        "name": "Starter",
+        "description": "For businesses ready to launch professionally.",
+        "price": "$499",
+        "billing": "month",
+        "button": "Choose Starter",
+        "featured": false,
+        "features": [
+          "Brand audit",
+          "1 landing page",
+          "Basic SEO setup",
+          "Monthly reporting"
+        ]
+      },
+      {
+        "name": "Growth",
+        "description": "For companies focused on lead generation and scale.",
+        "price": "$999",
+        "billing": "month",
+        "button": "Choose Growth",
+        "featured": true,
+        "features": [
+          "Ad campaign management",
+          "3 landing pages",
+          "SEO content strategy",
+          "CRM automation",
+          "Bi-weekly optimization"
+        ]
+      },
+      {
+        "name": "Scale",
+        "description": "For ambitious brands needing a full-funnel growth team.",
+        "price": "$1799",
+        "billing": "month",
+        "button": "Choose Scale",
+        "featured": false,
+        "features": [
+          "Multi-channel growth strategy",
+          "Unlimited campaign iterations",
+          "Advanced analytics dashboard",
+          "Dedicated strategist",
+          "Priority support"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "subtitle": "FAQ",
+    "title": "Answers to common questions before we get started.",
+    "description": "If you need something more specific, our team can tailor the engagement to your business goals.",
+    "items": [
+      {
+        "question": "What industries do you work with?",
+        "answer": "We work with service businesses, SaaS brands, e-commerce companies, local brands, and startups that want measurable digital growth."
+      },
+      {
+        "question": "How quickly can you launch a project?",
+        "answer": "Most projects begin within a few days, and campaign or landing page launches typically happen within one to three weeks depending on scope."
+      },
+      {
+        "question": "Can you customize the pricing plans?",
+        "answer": "Yes. The listed packages are starting points. We also build custom retainers and project scopes based on your needs."
+      },
+      {
+        "question": "Is the website content editable?",
+        "answer": "Yes. This build is driven by JSON files, so text, services, branding, testimonials, and pricing can be updated without rewriting the structure."
+      }
+    ]
+  },
+  "cta": {
+    "subtitle": "Ready To Grow",
+    "title": "Let us build your next growth engine.",
+    "description": "Whether you need stronger branding, better conversions, or more qualified leads, we are ready to help.",
+    "button": "Talk To Our Team"
+  },
+  "contact": {
+    "subtitle": "Contact Us",
+    "title": "Tell us what you are building.",
+    "description": "Share your goals and we will recommend the right strategy, scope, and launch plan.",
+    "info": [
+      {
+        "icon": "bi bi-geo-alt",
+        "title": "Office",
+        "value": "New York, USA"
+      },
+      {
+        "icon": "bi bi-envelope",
+        "title": "Email",
+        "value": "hello@konlineagency.com"
+      },
+      {
+        "icon": "bi bi-telephone",
+        "title": "Phone",
+        "value": "+1 234 567 890"
+      }
+    ]
+  },
+  "footer": {
+    "copy": "\u00a9 2026 K-Online Agency. All rights reserved.",
+    "links": [
+      {
+        "label": "About",
+        "target": "about.html"
+      },
+      {
+        "label": "Services",
+        "target": "services.html"
+      },
+      {
+        "label": "Portfolio",
+        "target": "portfolio.html"
+      },
+      {
+        "label": "Contact",
+        "target": "contact.html"
+      }
+    ],
+    "socials": [
+      {
+        "icon": "bi bi-facebook",
+        "url": "https://www.facebook.com/smisofts/"
+      },
+      {
+        "icon": "bi bi-instagram",
+        "url": "https://www.instagram.com/smisofts"
+      },
+      {
+        "icon": "bi bi-linkedin",
+        "url": "https://www.linkedin.com/company/smisofts/"
+      }
+    ]
+  }
+}
