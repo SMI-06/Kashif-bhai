@@ -32,7 +32,7 @@
       "Growth",
       "Results"
     ],
-    "description": "K-Online Agency helps modern businesses scale through strategy, branding, paid media, SEO, automation, and conversion-focused digital experiences.",
+    "description": "K-Online Agency empowers ambitious brands to dominate the digital space through high-impact strategy, powerful branding, performance marketing, SEO,automation, and conversion-driven digital experiences that turn traffic into revenue.",
     "primaryButton": "Book Free Consultation",
     "secondaryButton": "View Our Work",
     "stats": [
@@ -53,22 +53,12 @@
       {
         "icon": "bi bi-bar-chart-line",
         "title": "Growth Strategy",
-        "text": "Data-backed planning for measurable performance."
+        "text": "Data-driven growth systems designed to scale your brand, increase revenue, and deliver measurable business results."
       },
       {
         "icon": "bi bi-badge-ad",
         "title": "Paid Media",
-        "text": "Multi-channel ad campaigns with real ROI tracking."
-      },
-      {
-        "icon": "bi bi-search",
-        "title": "SEO Visibility",
-        "text": "Rank higher and attract your best-fit buyers organically."
-      },
-      {
-        "icon": "bi bi-palette",
-        "title": "Brand Systems",
-        "text": "Premium design that creates trust and recognition."
+        "text": "High-converting ad campaigns across every platform with measurable ROI and performance insights."
       }
     ]
   },

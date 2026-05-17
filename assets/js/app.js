@@ -131,6 +131,14 @@ function renderHero() {
               </p>
             </div>
           </div>
+
+          <div class="col-lg-5">
+            <div class="cc">
+              <div class="hero-grid">
+                ${cards}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
