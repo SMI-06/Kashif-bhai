@@ -1,130 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Panel — Kashif Agency</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .admin-topbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(5,8,18,0.95); backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border); padding: 14px 0;
-    }
-    .admin-topbar .container {
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    }
-    .admin-topbar .brand {
-      font-family: var(--font-display); font-weight: 800; font-size: 1.1rem;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .admin-topbar .brand .logo-mark {
-      width: 34px; height: 34px; font-size: 0.8rem;
-    }
-    .msg-cell { max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .clear-btn {
-      padding: 8px 20px; border-radius: 50px;
-      background: rgba(244,63,94,0.12); border: 1.5px solid rgba(244,63,94,0.3);
-      color: #f43f5e; font-size: 0.85rem; font-weight: 600;
-      transition: var(--transition); font-family: var(--font-body);
-    }
-    .clear-btn:hover { background: rgba(244,63,94,0.2); }
-    .export-btn {
-      padding: 8px 20px; border-radius: 50px;
-      background: var(--primary-dim); border: 1.5px solid var(--border-glow);
-      color: var(--primary); font-size: 0.85rem; font-weight: 600;
-      transition: var(--transition); font-family: var(--font-body);
-    }
-    .export-btn:hover { background: rgba(0,212,255,0.12); }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kashif Agency — Admin Panel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-orb orb1" aria-hidden="true"></div>
+    <div class="bg-orb orb2" aria-hidden="true"></div>
 
-  <div class="admin-topbar">
-    <div class="container">
-      <div class="brand">
-        <div class="logo-mark">KA</div>
-        <span>Admin <span style="color:var(--primary)">Panel</span></span>
+    <!-- Admin Nav -->
+    <nav class="admin-nav">
+      <div class="admin-nav-logo">KA Admin</div>
+      <div class="admin-nav-links">
+        <a href="index.html" class="admin-nav-link">← Back to Website</a>
+        <button class="export-btn" id="export-btn" onclick="exportCSV()">
+          Export CSV
+        </button>
+        <button class="btn-danger-soft" onclick="clearAll()">Clear All</button>
       </div>
-      <div style="display:flex; gap:10px; align-items:center">
-        <a href="index.html" class="export-btn">← Back to Site</a>
-        <button class="export-btn" onclick="exportCSV()">Export CSV</button>
-        <button class="clear-btn" onclick="clearAll()">Clear All</button>
-      </div>
-    </div>
-  </div>
+    </nav>
 
-  <div class="admin-page">
-    <div class="container">
+    <!-- Admin Content -->
+    <div class="admin-wrapper">
       <div class="admin-header">
-        <div>
-          <h1>Contact <span style="color:var(--primary)">Submissions</span></h1>
-          <p style="color:var(--text-muted); margin-top:4px; font-size:0.9rem">All form submissions are stored in your browser's localStorage.</p>
+        <div class="admin-title">Contact Submissions</div>
+        <div class="admin-subtitle">
+          View and manage all form submissions from your website
         </div>
       </div>
 
-      <div class="admin-stats" id="adminStats"></div>
+      <!-- Stats row -->
+      <div class="admin-stats" id="admin-stats"></div>
 
-      <div id="adminContent"></div>
-    </div>
-  </div>
+      <!-- Search + Filter -->
+      <div class="d-flex gap-3 align-items-center mb-3 flex-wrap">
+        <input
+          type="text"
+          class="search-input"
+          id="search-input"
+          placeholder="Search submissions..."
+          oninput="filterSubmissions(this.value)"
+        />
+        <select
+          class="search-input"
+          id="service-filter"
+          onchange="filterByService(this.value)"
+          style="width: auto"
+        >
+          <option value="">All Services</option>
+        </select>
+        <span
+          id="result-count"
+          style="
+            color: var(--muted);
+            font-size: 0.82rem;
+            font-family: &quot;Syne&quot;, sans-serif;
+          "
+        ></span>
+      </div>
 
-  <script src="data/content.js"></script>
-  <script>
-    // ── LOAD & DISPLAY SUBMISSIONS ─────────────────
-    function loadSubmissions() {
-      return JSON.parse(localStorage.getItem('ka_submissions') || '[]');
-    }
-
-    function renderAdmin() {
-      const data = loadSubmissions();
-      const stats = document.getElementById('adminStats');
-      const content = document.getElementById('adminContent');
-
-      // Stats
-      const services = {};
-      data.forEach(d => { services[d.service] = (services[d.service] || 0) + 1; });
-      const topService = Object.entries(services).sort((a,b) => b[1]-a[1])[0];
-
-      stats.innerHTML = `
-        <div class="a-stat">
-          <div class="a-stat-val">${data.length}</div>
-          <div class="a-stat-label">Total Submissions</div>
-        </div>
-        <div class="a-stat">
-          <div class="a-stat-val">${data.filter(d => d.status==='new').length}</div>
-          <div class="a-stat-label">New / Unread</div>
-        </div>
-        <div class="a-stat">
-          <div class="a-stat-val">${topService ? topService[1] : 0}</div>
-          <div class="a-stat-label">Top Service Requests</div>
-        </div>
-        <div class="a-stat" style="max-width:200px">
-          <div class="a-stat-val" style="font-size:1rem; padding-top:4px">${topService ? topService[0] : '—'}</div>
-          <div class="a-stat-label">Most Requested</div>
-        </div>
-      `;
-
-      if (!data.length) {
-        content.innerHTML = `
-          <div class="admin-table-wrap">
-            <div class="no-data">
-              <div style="font-size:3rem; margin-bottom:1rem">📭</div>
-              <h3 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:0.5rem">No Submissions Yet</h3>
-              <p>Contact form submissions will appear here once visitors fill out the form on your website.</p>
-            </div>
-          </div>
-        `;
-        return;
-      }
-
-      // Sort newest first
-      const sorted = [...data].reverse();
-
-      content.innerHTML = `
+      <!-- Table Card -->
+      <div class="admin-card">
         <div class="admin-table-wrap">
-          <table class="admin-table">
+          <table class="admin-table" id="submissions-table">
             <thead>
               <tr>
                 <th>#</th>
@@ -134,72 +82,270 @@
                 <th>Service</th>
                 <th>Message</th>
                 <th>Date & Time</th>
-                <th>Status</th>
+                <th>Action</th>
               </tr>
             </thead>
-            <tbody>
-              ${sorted.map((row, i) => `
-                <tr>
-                  <td style="color:var(--text-muted)">${sorted.length - i}</td>
-                  <td style="font-weight:600; color:var(--text-main)">${escHtml(row.name)}</td>
-                  <td><a href="mailto:${escHtml(row.email)}" style="color:var(--primary)">${escHtml(row.email)}</a></td>
-                  <td>${escHtml(row.phone || '—')}</td>
-                  <td>
-                    <span style="
-                      display:inline-block; padding:3px 10px; border-radius:20px;
-                      font-size:0.75rem; font-weight:700;
-                      background:rgba(124,58,237,0.12); color:#a78bfa;
-                      border:1px solid rgba(124,58,237,0.3);
-                    ">${escHtml(row.service || '—')}</span>
-                  </td>
-                  <td class="msg-cell" title="${escHtml(row.message)}">${escHtml(row.message)}</td>
-                  <td style="white-space:nowrap; font-size:0.82rem">${escHtml(row.datetime)}</td>
-                  <td><span class="status-new">New</span></td>
-                </tr>
-              `).join('')}
-            </tbody>
+            <tbody id="submissions-body"></tbody>
           </table>
         </div>
-      `;
-    }
+        <div class="admin-empty" id="admin-empty" style="display: none">
+          <div class="admin-empty-icon">📭</div>
+          <div
+            style="
+              font-family: &quot;Syne&quot;, sans-serif;
+              font-size: 1.1rem;
+              margin-bottom: 0.5rem;
+            "
+          >
+            No submissions yet
+          </div>
+          <div>Form submissions from your website will appear here.</div>
+        </div>
+      </div>
+    </div>
 
-    function escHtml(str) {
-      return String(str || '')
-        .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-    }
-
-    function clearAll() {
-      if (confirm('Delete all submissions? This cannot be undone.')) {
-        localStorage.removeItem('ka_submissions');
-        renderAdmin();
+    <script>
+      // ── Data ─────────────────────────────────────────────
+      function getSubmissions() {
+        return JSON.parse(localStorage.getItem("ka_submissions") || "[]");
       }
-    }
+      function saveSubmissions(data) {
+        localStorage.setItem("ka_submissions", JSON.stringify(data));
+      }
 
-    function exportCSV() {
-      const data = loadSubmissions();
-      if (!data.length) { alert('No submissions to export.'); return; }
-      const headers = ['ID','Name','Email','Phone','Service','Message','DateTime','Status'];
-      const rows = data.map(r => [
-        r.id, r.name, r.email, r.phone || '', r.service, r.message.replace(/\n/g,' '), r.datetime, r.status
-      ].map(v => `"${String(v).replace(/"/g,'""')}"`).join(','));
-      const csv = [headers.join(','), ...rows].join('\n');
-      const blob = new Blob([csv], { type: 'text/csv' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'kashif-agency-submissions.csv'; a.click();
-      URL.revokeObjectURL(url);
-    }
+      // ── Render Stats ─────────────────────────────────────
+      function renderStats(data) {
+        const services = [
+          ...new Set(data.map((d) => d.service).filter(Boolean)),
+        ];
+        const today = data.filter(
+          (d) =>
+            d.date ===
+            new Date().toLocaleDateString("en-PK", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            }),
+        ).length;
 
-    // Boot
-    document.title = 'Admin Panel — Kashif Agency';
-    renderAdmin();
+        const statsEl = document.getElementById("admin-stats");
+        statsEl.innerHTML = `
+        <div class="admin-stat-card">
+          <div class="admin-stat-num">${data.length}</div>
+          <div class="admin-stat-label">Total Submissions</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-num">${today}</div>
+          <div class="admin-stat-label">Today</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-num">${services.length}</div>
+          <div class="admin-stat-label">Services Requested</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-num">${data.length > 0 ? "✓" : "—"}</div>
+          <div class="admin-stat-label">Status</div>
+        </div>`;
+      }
 
-    // Listen for new submissions from other tabs
-    window.addEventListener('storage', (e) => {
-      if (e.key === 'ka_submissions') renderAdmin();
-    });
-  </script>
+      // ── Render Table ──────────────────────────────────────
+      function renderTable(data) {
+        const tbody = document.getElementById("submissions-body");
+        const empty = document.getElementById("admin-empty");
+        const countEl = document.getElementById("result-count");
 
-</body>
+        countEl.textContent = `Showing ${data.length} record${data.length !== 1 ? "s" : ""}`;
+
+        if (!data.length) {
+          tbody.innerHTML = "";
+          empty.style.display = "block";
+          return;
+        }
+        empty.style.display = "none";
+
+        tbody.innerHTML = data
+          .map(
+            (row, i) => `
+        <tr onclick="toggleDetail('detail-${row.id}')" style="cursor:pointer">
+          <td style="color:var(--muted);font-size:0.8rem">${i + 1}</td>
+          <td><strong style="color:var(--text)">${escHtml(row.name)}</strong></td>
+          <td><a href="mailto:${escHtml(row.email)}" style="color:var(--primary)" onclick="event.stopPropagation()">${escHtml(row.email)}</a></td>
+          <td>${row.phone ? escHtml(row.phone) : '<span style="opacity:.4">—</span>'}</td>
+          <td>${row.service ? `<span class="badge-service">${escHtml(row.service)}</span>` : '<span style="opacity:.4">—</span>'}</td>
+          <td><div class="message-cell">${escHtml(row.message)}</div></td>
+          <td style="white-space:nowrap;font-size:0.8rem">${row.date}<br><span style="color:var(--muted)">${row.time}</span></td>
+          <td onclick="event.stopPropagation()">
+            <button onclick="deleteRow(${row.id})" style="background:none;border:none;color:var(--muted);cursor:pointer;padding:4px" title="Delete">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+            </button>
+          </td>
+        </tr>
+        <tr class="row-detail" id="detail-${row.id}">
+          <td colspan="8">
+            <strong style="font-family:'Syne',sans-serif;font-size:0.82rem;color:var(--primary)">FULL MESSAGE</strong>
+            <div class="detail-message">${escHtml(row.message)}</div>
+          </td>
+        </tr>`,
+          )
+          .join("");
+      }
+
+      // ── Toggle row detail ─────────────────────────────────
+      function toggleDetail(id) {
+        const el = document.getElementById(id);
+        if (el) el.classList.toggle("open");
+      }
+
+      // ── Delete Row ────────────────────────────────────────
+      function deleteRow(id) {
+        if (!confirm("Delete this submission?")) return;
+        const data = getSubmissions().filter((d) => d.id !== id);
+        saveSubmissions(data);
+        load();
+      }
+
+      // ── Clear All ─────────────────────────────────────────
+      function clearAll() {
+        if (!confirm("Delete ALL submissions? This cannot be undone.")) return;
+        localStorage.removeItem("ka_submissions");
+        load();
+      }
+
+      // ── Search ────────────────────────────────────────────
+      let allData = [];
+      function filterSubmissions(query) {
+        const q = query.toLowerCase();
+        const service = document.getElementById("service-filter").value;
+        const filtered = allData.filter((d) => {
+          const matchQ =
+            !q ||
+            [d.name, d.email, d.phone, d.message, d.service].some((v) =>
+              (v || "").toLowerCase().includes(q),
+            );
+          const matchS = !service || d.service === service;
+          return matchQ && matchS;
+        });
+        renderTable(filtered);
+      }
+      function filterByService(val) {
+        filterSubmissions(document.getElementById("search-input").value);
+      }
+
+      // ── Export CSV ────────────────────────────────────────
+      function exportCSV() {
+        const data = getSubmissions();
+        if (!data.length) {
+          alert("No submissions to export.");
+          return;
+        }
+        const headers = [
+          "#",
+          "Name",
+          "Email",
+          "Phone",
+          "Service",
+          "Message",
+          "Date",
+          "Time",
+        ];
+        const rows = data.map((d, i) => [
+          i + 1,
+          d.name,
+          d.email,
+          d.phone || "",
+          d.service || "",
+          d.message.replace(/,/g, " "),
+          d.date,
+          d.time,
+        ]);
+        const csv = [headers, ...rows]
+          .map((r) => r.map((c) => `"${c}"`).join(","))
+          .join("\n");
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+        a.download = `kashif-agency-submissions-${Date.now()}.csv`;
+        a.click();
+      }
+
+      // ── Escape HTML ───────────────────────────────────────
+      function escHtml(str) {
+        if (!str) return "";
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      // ── Populate service filter ───────────────────────────
+      function populateServiceFilter(data) {
+        const services = [
+          ...new Set(data.map((d) => d.service).filter(Boolean)),
+        ];
+        const sel = document.getElementById("service-filter");
+        services.forEach((s) => {
+          const opt = document.createElement("option");
+          opt.value = s;
+          opt.textContent = s;
+          sel.appendChild(opt);
+        });
+      }
+
+      // ── Main Load ─────────────────────────────────────────
+      function load() {
+        allData = getSubmissions().reverse(); // newest first
+        renderStats(allData);
+        populateServiceFilter(allData);
+        renderTable(allData);
+      }
+
+      load();
+
+      // Add demo data if empty (for testing)
+      document.addEventListener("DOMContentLoaded", () => {
+        if (!getSubmissions().length) {
+          const demo = [
+            {
+              id: 1001,
+              name: "Ahmed Khan",
+              email: "ahmed@example.com",
+              phone: "+92 300 1111111",
+              service: "SEO & Google Ranking",
+              message:
+                "We need to improve our search rankings for our e-commerce website. Currently on page 3 for main keywords.",
+              date: "May 18, 2024",
+              time: "10:30 AM",
+              datetime: new Date().toISOString(),
+            },
+            {
+              id: 1002,
+              name: "Sara Ali",
+              email: "sara@techcorp.pk",
+              phone: "+92 333 2222222",
+              service: "Web Development",
+              message:
+                "Looking for a modern e-commerce platform with payment gateway integration for our fashion brand.",
+              date: "May 17, 2024",
+              time: "2:15 PM",
+              datetime: new Date().toISOString(),
+            },
+            {
+              id: 1003,
+              name: "James Wilson",
+              email: "james@startup.io",
+              phone: "",
+              service: "AI Automation",
+              message:
+                "Interested in automating our customer support with AI chatbots. We handle around 1000 queries per day.",
+              date: "May 16, 2024",
+              time: "9:00 AM",
+              datetime: new Date().toISOString(),
+            },
+          ];
+          saveSubmissions(demo);
+          load();
+        }
+      });
+    </script>
+  </body>
 </html>

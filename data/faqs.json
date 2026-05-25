@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "How long does it take to see SEO results?",
+    "answer": "SEO is a long-term investment. While some improvements — like technical fixes and on-page optimization — show results within 4–6 weeks, significant ranking improvements typically take 3–6 months. Our clients generally see measurable traffic increases within 90 days and strong ROI within 6 months."
+  },
+  {
+    "id": 2,
+    "question": "What makes Kashif Agency different from other agencies?",
+    "answer": "Three things set us apart: (1) 20+ years of proven experience across diverse industries, (2) our AI-first approach that gives clients a technological edge, and (3) our full-service model — one team handles everything from strategy to execution, ensuring perfect brand consistency and faster results."
+  },
+  {
+    "id": 3,
+    "question": "Do you work with small businesses or only enterprises?",
+    "answer": "We work with businesses of all sizes — from ambitious startups to Fortune 500 enterprises. Our service packages are designed to scale, so whether you're a startup with a tight budget or a large corporation needing a comprehensive digital overhaul, we have the right solution for you."
+  },
+  {
+    "id": 4,
+    "question": "What is your pricing model?",
+    "answer": "Our pricing is project-based and retainer-based depending on the service. We offer transparent, competitive pricing with no hidden fees. After understanding your goals and requirements in a free consultation, we provide a detailed proposal with clear deliverables and pricing. Contact us for a custom quote."
+  },
+  {
+    "id": 5,
+    "question": "Can you integrate AI into our existing business systems?",
+    "answer": "Absolutely. Our AI integration team specializes in connecting AI solutions to existing CRMs, ERPs, e-commerce platforms, and custom software. We assess your current tech stack, identify automation opportunities, and implement AI solutions that work seamlessly with what you already have."
+  },
+  {
+    "id": 6,
+    "question": "Do you offer ongoing support after project completion?",
+    "answer": "Yes, we offer comprehensive post-launch support and maintenance packages. This includes technical support, performance monitoring, content updates, and continuous optimization. We view every client relationship as a long-term partnership, not a one-time transaction."
+  }
+]

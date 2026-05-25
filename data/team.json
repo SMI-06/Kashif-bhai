@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Kashif Rahman",
+    "role": "Founder & CEO",
+    "bio": "20+ years shaping digital brands. Visionary leader with expertise in digital strategy and AI-driven marketing transformation.",
+    "initials": "KR",
+    "gradient": "linear-gradient(135deg, #00d4ff, #7c3aed)",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ayesha Siddiqui",
+    "role": "Chief Marketing Officer",
+    "bio": "Performance marketing maestro with 15+ years scaling brands across MENA and South Asia markets through data-driven campaigns.",
+    "initials": "AS",
+    "gradient": "linear-gradient(135deg, #ffd700, #ff8c00)",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Zain Mirza",
+    "role": "Head of AI & Technology",
+    "bio": "AI specialist and full-stack architect building next-generation automation platforms and AI-integrated digital experiences.",
+    "initials": "ZM",
+    "gradient": "linear-gradient(135deg, #00ff88, #00d4ff)",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Hira Khan",
+    "role": "Creative Director",
+    "bio": "Award-winning creative director crafting visual identities and brand experiences that resonate, inspire, and convert across every touchpoint.",
+    "initials": "HK",
+    "gradient": "linear-gradient(135deg, #ff6b6b, #7c3aed)",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  }
+]

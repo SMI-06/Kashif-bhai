@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "icon": "search",
+    "category": "Marketing",
+    "title": "SEO & Google Ranking",
+    "description": "Dominate search results with our proven SEO strategies. We combine technical excellence, strategic content, and authority link building to rank your business on Page 1.",
+    "features": ["Technical Audit", "Keyword Strategy", "Link Building", "Local SEO"],
+    "color": "#00d4ff",
+    "badge": "Most Popular"
+  },
+  {
+    "id": 2,
+    "icon": "megaphone",
+    "category": "Marketing",
+    "title": "Social Media Marketing",
+    "description": "Build a loyal community and drive conversions with data-driven social media strategies across all major platforms — Instagram, LinkedIn, TikTok, Facebook, and more.",
+    "features": ["Content Strategy", "Community Management", "Influencer Marketing", "Analytics"],
+    "color": "#7c3aed",
+    "badge": null
+  },
+  {
+    "id": 3,
+    "icon": "target",
+    "category": "Advertising",
+    "title": "Paid Media & Advertising",
+    "description": "Maximize your advertising ROI with precision-targeted paid campaigns on Google, Meta, LinkedIn, and programmatic networks. Every rupee optimized for maximum return.",
+    "features": ["Google Ads", "Meta Ads", "LinkedIn Ads", "Programmatic"],
+    "color": "#ffd700",
+    "badge": "High ROI"
+  },
+  {
+    "id": 4,
+    "icon": "palette",
+    "category": "Branding",
+    "title": "Branding & Strategy",
+    "description": "Create a brand identity that commands attention, builds trust, and resonates deeply with your target audience. From logo to complete brand guidelines.",
+    "features": ["Brand Identity", "Logo Design", "Brand Guidelines", "Messaging"],
+    "color": "#ff6b6b",
+    "badge": null
+  },
+  {
+    "id": 5,
+    "icon": "code",
+    "category": "Technology",
+    "title": "Web Development",
+    "description": "Build lightning-fast, conversion-optimized websites and web applications using modern frameworks. Designed to rank, engage, and convert your ideal customers.",
+    "features": ["React / Next.js", "WordPress", "E-commerce", "Landing Pages"],
+    "color": "#00d4ff",
+    "badge": null
+  },
+  {
+    "id": 6,
+    "icon": "layers",
+    "category": "Technology",
+    "title": "Software Development",
+    "description": "Custom software solutions, mobile apps, SaaS platforms, and enterprise systems built with scalability and performance at their core.",
+    "features": ["Mobile Apps", "SaaS Platforms", "APIs", "ERP Systems"],
+    "color": "#7c3aed",
+    "badge": null
+  },
+  {
+    "id": 7,
+    "icon": "cpu",
+    "category": "AI",
+    "title": "AI Automation",
+    "description": "Automate repetitive business processes, marketing workflows, customer support, and data analysis using intelligent AI agents and workflow automation platforms.",
+    "features": ["Process Automation", "AI Agents", "n8n / Zapier", "CRM Automation"],
+    "color": "#00ff88",
+    "badge": "Trending"
+  },
+  {
+    "id": 8,
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#ffd700",
+    "badge": null
+  }
+]

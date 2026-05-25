@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Ahmed Al-Rashid",
+    "role": "CEO",
+    "company": "NexaBank",
+    "avatar": "AR",
+    "rating": 5,
+    "text": "Kashif Agency transformed our digital banking experience. Their AI integration and web development team delivered a world-class platform that exceeded every expectation. Our digital signups increased by 340% in the first quarter alone.",
+    "color": "#00d4ff"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Johnson",
+    "role": "Marketing Director",
+    "company": "MedCare Group",
+    "avatar": "SJ",
+    "rating": 5,
+    "text": "The SEO results are nothing short of miraculous. Within 6 months, we went from Page 4 to ranking #1 for our most competitive keywords. Our organic traffic tripled and lead quality improved dramatically. Best investment we've made.",
+    "color": "#7c3aed"
+  },
+  {
+    "id": 3,
+    "name": "Fatima Malik",
+    "role": "Founder",
+    "company": "Luxe Fashion",
+    "avatar": "FM",
+    "rating": 5,
+    "text": "The branding work Kashif Agency did for us was absolutely stunning. They understood our vision perfectly and created a brand identity that truly reflects the luxury positioning we were aiming for. Our brand valuation doubled.",
+    "color": "#ffd700"
+  },
+  {
+    "id": 4,
+    "name": "David Chen",
+    "role": "CTO",
+    "company": "RetailCorp Asia",
+    "avatar": "DC",
+    "rating": 5,
+    "text": "Their AI automation solution handles over 10,000 customer interactions daily with 95% accuracy. We've reduced support costs by 85% while improving customer satisfaction scores. The ROI was visible within the first month.",
+    "color": "#00ff88"
+  },
+  {
+    "id": 5,
+    "name": "Omar Hassan",
+    "role": "Co-Founder",
+    "company": "EduPath Online",
+    "avatar": "OH",
+    "rating": 5,
+    "text": "Kashif Agency's paid media strategy scaled our student base from 500 to 50,000 in just 8 months. Their data-driven approach and constant optimization delivered a 12x return on our ad spend. Absolutely phenomenal team.",
+    "color": "#ff6b6b"
+  }
+]

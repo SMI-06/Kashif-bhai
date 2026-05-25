@@ -1,0 +1,61 @@
+{
+  "site": {
+    "name": "Kashif Agency",
+    "tagline": "Digital Marketing & Technology",
+    "logo": "KA",
+    "logoText": "Kashif Agency",
+    "description": "Premium digital marketing and AI technology agency with 20+ years of excellence.",
+    "email": "hello@kashifagency.com",
+    "phone": "+92 300 1234567",
+    "address": "Karachi, Pakistan",
+    "timing": "Mon–Sat: 9AM – 6PM PKT",
+    "founded": "2004",
+    "experience": "20+",
+    "projects": "500+",
+    "clients": "300+",
+    "satisfaction": "98%"
+  },
+  "theme": {
+    "primaryColor": "#00d4ff",
+    "secondaryColor": "#ffd700",
+    "accentColor": "#7c3aed",
+    "bgDark": "#050508",
+    "bgCard": "#0d1117",
+    "bgGlass": "rgba(13,17,23,0.7)",
+    "textPrimary": "#ffffff",
+    "textMuted": "#8892a4",
+    "gradientPrimary": "linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%)",
+    "gradientGold": "linear-gradient(135deg, #ffd700 0%, #ff8c00 100%)"
+  },
+  "social": [
+    { "name": "LinkedIn",  "icon": "linkedin",  "url": "https://linkedin.com" },
+    { "name": "Twitter",   "icon": "twitter",   "url": "https://twitter.com" },
+    { "name": "Instagram", "icon": "instagram", "url": "https://instagram.com" },
+    { "name": "Facebook",  "icon": "facebook",  "url": "https://facebook.com" },
+    { "name": "YouTube",   "icon": "youtube",   "url": "https://youtube.com" }
+  ],
+  "nav": [
+    { "label": "Home",      "href": "#home" },
+    { "label": "About",     "href": "#about" },
+    { "label": "Services",  "href": "#services" },
+    { "label": "Portfolio", "href": "#portfolio" },
+    { "label": "Team",      "href": "#team" }
+  ],
+  "footer": {
+    "quickLinks": [
+      { "label": "Home",      "href": "#home" },
+      { "label": "About Us",  "href": "#about" },
+      { "label": "Services",  "href": "#services" },
+      { "label": "Portfolio", "href": "#portfolio" },
+      { "label": "Contact",   "href": "#contact" }
+    ],
+    "services": [
+      { "label": "SEO Optimization",    "href": "#services" },
+      { "label": "Paid Advertising",    "href": "#services" },
+      { "label": "Web Development",     "href": "#services" },
+      { "label": "AI Automation",       "href": "#services" },
+      { "label": "Brand Strategy",      "href": "#services" }
+    ],
+    "copyright": "© 2024 Kashif Agency. All Rights Reserved."
+  }
+}
