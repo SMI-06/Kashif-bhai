@@ -139,8 +139,12 @@ function renderHero() {
 
   el.innerHTML = `
     <div class="container">
+    <div class="hero-particles" aria-hidden="true">${particles}</div>
       <div class="row align-items-center g-5">
         <div class="col-lg-12 hero-content reveal">
+          <div class="orbit-ring ring-1"><div class="orbit-dot"></div></div>
+          <div class="orbit-ring ring-2"><div class="orbit-dot"></div></div>
+          <div class="orbit-ring ring-3"><div class="orbit-dot"></div></div>
           <h1 class="hero-title">
             ${h.headline}
             <span class="line2">${h.headlineHighlight}</span>
