@@ -9,12 +9,12 @@
 /* ── CSS Variables ────────────────────────────────────────── */
 :root {
   --primary: #001f3f;
-  --secondary: #ffd700;
-  --gold: #ffd700;
-  --darkGold: #daa520;
+  --secondary: #E5B80B;
+  --gold: #E5B80B;
+  --darkGold: #D4AF37;
   --accent: #7c3aed;
   --accent2: #00ff88;
-  --bg: #ffd700;
+  --bg: #E5B80B;
   --bg-card: #fff;
   --bg-darkNavy: #001630;
   --bg-glass: #001f3f;
@@ -22,8 +22,8 @@
   --border-gold: rgba(255, 215, 0, 0.2);
   --text: #ffffff;
   --muted: #8892a4;
-  --grad-main: linear-gradient(135deg, #DAA520 0%, #FFD700 100%);
-  --grad-gold: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  --grad-main: linear-gradient(135deg, #D4AF37 0%, #E5B80B 100%);
+  --grad-gold: linear-gradient(135deg, #E5B80B 0%, #ff8c00 100%);
   --grad-green: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
   --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.15);
   --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.5);
@@ -366,7 +366,7 @@ section {
   gap: 0.5rem;
   background: rgba(0, 212, 255, 0.08);
   border: 1px solid rgba(0, 212, 255, 0.2);
-  color: var(--primary);
+  color: var(--secondary);
   padding: 0.4rem 1rem;
   border-radius: 50px;
   font-size: 0.8rem;
@@ -381,7 +381,7 @@ section {
   content: '';
   width: 6px;
   height: 6px;
-  background: var(--primary);
+  background: var(--secondary);
   border-radius: 50%;
 }
 
@@ -418,7 +418,9 @@ section {
   display: flex;
   align-items: center;
   padding: 120px 0 80px;
+  /* mar */
   position: relative;
+  border-bottom: 1px solid var(--darkGold);
 }
 
 .hero-particles {
@@ -436,7 +438,6 @@ section {
   animation: float-particle linear infinite;
   opacity: 0.6;
 }
-
 
 @keyframes float-particle {
   0% {
@@ -592,7 +593,18 @@ section {
   transform: translateY(-2px);
 }
 
+#stats {
+   background: var(--bg-darkNavy);
+}
+
+.stats-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-stats {
+  margin: 1rem 0;
   display: flex;
   gap: 2.5rem;
   flex-wrap: wrap;
@@ -620,12 +632,12 @@ section {
   letter-spacing: 0.08em;
 }
 
-.hero-visual {
+/* .hero-visual {
   position: relative;
   animation: fadeInRight 0.8s ease 0.5s both;
-}
+} */
 
-.hero-card-main {
+/* .hero-card-main {
   background: var(--bg-glass);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border);
@@ -653,13 +665,14 @@ section {
   height: 300px;
   background: radial-gradient(circle, rgba(0, 212, 255, 0.15), transparent 70%);
   border-radius: 50%;
-}
+} */
 
 .orbit-container {
   position: relative;
-  width: 280px;
-  height: 280px;
-  margin: 0 auto;
+  width: 100%;
+  /* height: 280px; */
+  /* margin: 0 auto; */
+  margin-top: 15rem;
 }
 
 .orbit-center {
@@ -667,8 +680,6 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
   background: var(--grad-main);
   border-radius: 20px;
   display: flex;
@@ -892,6 +903,7 @@ section {
 }
 
 /* ── About Section ────────────────────────────────────────── */
+
 #about {
   background: transparent;
 }
@@ -905,58 +917,6 @@ section {
 
 .about-visual {
   position: relative;
-}
-
-.about-img-wrap {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 3rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-img-wrap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--grad-gold);
-}
-
-.about-number-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.about-num-card {
-  background: rgba(0, 212, 255, 0.04);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  text-align: center;
-  transition: var(--transition);
-}
-
-.about-num-card:hover {
-  border-color: var(--primary);
-  background: rgba(0, 212, 255, 0.08);
-  transform: translateY(-4px);
-}
-
-.about-num {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-}
-
-.about-num-label {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-top: 0.25rem;
 }
 
 .about-features {
@@ -978,7 +938,7 @@ section {
 }
 
 .about-feature:hover {
-  border-color: var(--primary);
+  border-color: var(--secondary);
   transform: translateY(-3px);
 }
 
@@ -991,7 +951,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .about-feature h4 {
@@ -1008,6 +968,7 @@ section {
 }
 
 /* ── Services Section ─────────────────────────────────────── */
+
 #services {
   background: rgba(13, 17, 23, 0.3);
 }
@@ -2812,7 +2773,7 @@ textarea.form-control {
 .footer-social {
   display: flex;
   gap: 0.5rem;
- color: var(--muted);
+  color: var(--muted);
   margin-top: 1rem;
 }
 

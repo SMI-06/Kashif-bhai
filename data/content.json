@@ -5,26 +5,62 @@
     "headlineHighlight": "Dominate Markets",
     "subheadline": "20+ Years of Digital Excellence",
     "description": "From cutting-edge AI automation to performance marketing and world-class web development — we craft digital experiences that convert visitors into loyal customers and brands into market leaders.",
-    "cta1": { "label": "Explore Services",  "href": "#services" },
-    "cta2": { "label": "View Portfolio",    "href": "#portfolio" },
-    "stats": [
-      { "value": "20+",  "label": "Years Experience" },
-      { "value": "500+", "label": "Projects Delivered" },
-      { "value": "300+", "label": "Happy Clients" },
-      { "value": "98%",  "label": "Client Retention" }
+    "cta1": {
+      "label": "Explore Services",
+      "href": "#services"
+    },
+    "cta2": {
+      "label": "View Portfolio",
+      "href": "#portfolio"
+    }
+  },
+  "stats": {
+    "stat": [
+      {
+        "value": "10+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "10+",
+        "label": "Projects Delivered"
+      },
+      {
+        "value": "10+",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "10%",
+        "label": "Client Retention"
+      }
     ]
   },
   "about": {
-    "badge": "Who We Are",
-    "headline": "Pakistan's Premier Digital",
-    "headlineHighlight": "Marketing & AI Agency",
+    "badge": "About Us",
+    "headline": "Kashif Agency",
+    "headlineHighlight": "Premium Digital Marketing",
     "description1": "Founded in 2004, Kashif Agency has been at the forefront of digital transformation. We combine traditional marketing wisdom with cutting-edge AI technology to deliver results that matter.",
     "description2": "Our multidisciplinary team of strategists, designers, developers, and AI specialists works cohesively to create campaigns and solutions that drive measurable growth for your business.",
     "features": [
-      { "icon": "cpu",           "title": "AI-First Approach",        "desc": "Leveraging latest AI tools and automation to supercharge your marketing ROI." },
-      { "icon": "award",         "title": "Award-Winning Work",        "desc": "Recognized globally for creative excellence and measurable business impact." },
-      { "icon": "users",         "title": "Dedicated Team",            "desc": "80+ specialists across marketing, tech, design, and AI strategy domains." },
-      { "icon": "trending-up",   "title": "Proven ROI",                "desc": "Average 340% ROI delivered to clients across all major industry verticals." }
+      {
+        "icon": "<i class=\"fas fa-award\"></i>",
+        "title": "Awards",
+        "desc": "Awards Details"
+      },
+      {
+        "icon": "<i class=\"fas fa-award\"></i>",
+        "title": "Awards",
+        "desc": "Awards Details"
+      },
+      {
+        "icon": "<i class=\"fas fa-award\"></i>",
+        "title": "Awards",
+        "desc": "Awards Details"
+      },
+      {
+        "icon": "<i class=\"fas fa-award\"></i>",
+        "title": "Awards",
+        "desc": "Awards Details"
+      }
     ]
   },
   "whyUs": {
@@ -32,12 +68,36 @@
     "headline": "The Agency That Delivers",
     "headlineHighlight": "Real Results",
     "reasons": [
-      { "icon": "zap",          "title": "AI-Powered Strategies",     "desc": "We use advanced AI and data analytics to create hyper-targeted campaigns that outperform the competition." },
-      { "icon": "shield",       "title": "Proven Track Record",       "desc": "500+ successful projects and 20+ years of consistently delivering above-expectation results." },
-      { "icon": "globe",        "title": "Full-Service Agency",       "desc": "From SEO to AI automation — one agency handles everything, ensuring perfect brand consistency." },
-      { "icon": "bar-chart-2",  "title": "Data-Driven Decisions",     "desc": "Every strategy is backed by deep data analysis, A/B testing, and performance tracking." },
-      { "icon": "clock",        "title": "24/7 Support",              "desc": "Dedicated account managers and round-the-clock support to keep your business running smoothly." },
-      { "icon": "star",         "title": "Premium Quality",           "desc": "We never compromise on quality — every deliverable meets the highest international standards." }
+      {
+        "icon": "zap",
+        "title": "AI-Powered Strategies",
+        "desc": "We use advanced AI and data analytics to create hyper-targeted campaigns that outperform the competition."
+      },
+      {
+        "icon": "shield",
+        "title": "Proven Track Record",
+        "desc": "500+ successful projects and 20+ years of consistently delivering above-expectation results."
+      },
+      {
+        "icon": "globe",
+        "title": "Full-Service Agency",
+        "desc": "From SEO to AI automation — one agency handles everything, ensuring perfect brand consistency."
+      },
+      {
+        "icon": "bar-chart-2",
+        "title": "Data-Driven Decisions",
+        "desc": "Every strategy is backed by deep data analysis, A/B testing, and performance tracking."
+      },
+      {
+        "icon": "clock",
+        "title": "24/7 Support",
+        "desc": "Dedicated account managers and round-the-clock support to keep your business running smoothly."
+      },
+      {
+        "icon": "star",
+        "title": "Premium Quality",
+        "desc": "We never compromise on quality — every deliverable meets the highest international standards."
+      }
     ]
   },
   "aiSection": {
@@ -46,10 +106,26 @@
     "headlineHighlight": "Integration",
     "description": "Transform your business with intelligent automation, AI-powered marketing, and custom AI solutions built specifically for your industry.",
     "solutions": [
-      { "icon": "bot",          "title": "AI Chatbots & Virtual Agents",  "desc": "Deploy intelligent conversational AI that handles customer queries 24/7, qualifying leads and driving conversions automatically." },
-      { "icon": "brain",        "title": "Predictive Analytics",          "desc": "Use machine learning models to forecast customer behavior, optimize ad spend, and identify growth opportunities before competitors." },
-      { "icon": "workflow",     "title": "Marketing Automation",          "desc": "Automate repetitive tasks, email sequences, social posting, and lead nurturing with intelligent workflow systems." },
-      { "icon": "eye",          "title": "AI Content Generation",         "desc": "Generate SEO-optimized content, ad copy, and social media posts at scale using fine-tuned AI models aligned to your brand voice." }
+      {
+        "icon": "bot",
+        "title": "AI Chatbots & Virtual Agents",
+        "desc": "Deploy intelligent conversational AI that handles customer queries 24/7, qualifying leads and driving conversions automatically."
+      },
+      {
+        "icon": "brain",
+        "title": "Predictive Analytics",
+        "desc": "Use machine learning models to forecast customer behavior, optimize ad spend, and identify growth opportunities before competitors."
+      },
+      {
+        "icon": "workflow",
+        "title": "Marketing Automation",
+        "desc": "Automate repetitive tasks, email sequences, social posting, and lead nurturing with intelligent workflow systems."
+      },
+      {
+        "icon": "eye",
+        "title": "AI Content Generation",
+        "desc": "Generate SEO-optimized content, ad copy, and social media posts at scale using fine-tuned AI models aligned to your brand voice."
+      }
     ]
   },
   "seoSection": {
@@ -58,10 +134,26 @@
     "headlineHighlight": "Guaranteed Results",
     "description": "Our data-driven SEO methodology has helped 200+ businesses achieve first-page rankings, driving sustainable organic traffic and qualified leads.",
     "metrics": [
-      { "value": "200+",  "label": "Websites Ranked",        "icon": "search" },
-      { "value": "450%",  "label": "Avg Traffic Increase",   "icon": "trending-up" },
-      { "value": "#1",    "label": "Google Rankings",         "icon": "award" },
-      { "value": "12M+",  "label": "Keywords Optimized",     "icon": "key" }
+      {
+        "value": "200+",
+        "label": "Websites Ranked",
+        "icon": "search"
+      },
+      {
+        "value": "450%",
+        "label": "Avg Traffic Increase",
+        "icon": "trending-up"
+      },
+      {
+        "value": "#1",
+        "label": "Google Rankings",
+        "icon": "award"
+      },
+      {
+        "value": "12M+",
+        "label": "Keywords Optimized",
+        "icon": "key"
+      }
     ],
     "features": [
       "Technical SEO Audits",
@@ -78,8 +170,14 @@
     "headline": "Ready to Grow Your Business",
     "headlineHighlight": "Exponentially?",
     "description": "Join 300+ successful businesses that trust Kashif Agency for their digital growth. Get a free strategy consultation today.",
-    "btn1": { "label": "Get Free Consultation", "href": "#contact" },
-    "btn2": { "label": "View Case Studies",     "href": "#portfolio" }
+    "btn1": {
+      "label": "Get Free Consultation",
+      "href": "#contact"
+    },
+    "btn2": {
+      "label": "View Case Studies",
+      "href": "#portfolio"
+    }
   },
   "contact": {
     "badge": "Get In Touch",
@@ -87,10 +185,22 @@
     "headlineHighlight": "Remarkable Together",
     "description": "Ready to transform your digital presence? Fill out the form and our team will get back to you within 24 hours.",
     "info": [
-      { "icon": "envelope",      "label": "Email Us",      "value": "hello@kashifagency.com" },
-      { "icon": "phone",     "label": "Call Us",       "value": "+92 300 1234567" },
-      { "icon": "map-pin",   "label": "Our Office",    "value": "Lahore, Pakistan" },
-      { "icon": "clock",     "label": "Working Hours", "value": "Mon–Sat: 9AM – 7PM PKT" }
+      {
+        "label": "Email Us",
+        "value": "hello@kashifagency.com"
+      },
+      {
+        "label": "Call Us",
+        "value": "+92 300 1234567"
+      },
+      {
+        "label": "Our Office",
+        "value": "Lahore, Pakistan"
+      },
+      {
+        "label": "Working Hours",
+        "value": "Mon–Sat: 9AM – 7PM PKT"
+      }
     ],
     "services": [
       "SEO & Google Ranking",

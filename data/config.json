@@ -13,7 +13,13 @@
     "experience": "20+",
     "projects": "500+",
     "clients": "300+",
-    "satisfaction": "98%"
+    "satisfaction": "98%",
+    "icons": {
+      "email": "<i class=\"fas fa-envelope\"></i>",
+      "phone": "<i class=\"fas fa-phone\"></i>",
+      "address": "<i class=\"fas fa-map-pin\"></i>",
+      "timing": "<i class=\"fas fa-clock\"></i>"
+    }
   },
   "theme": {
     "primaryColor": "#00d4ff",
@@ -28,33 +34,108 @@
     "gradientGold": "linear-gradient(135deg, #ffd700 0%, #ff8c00 100%)"
   },
   "social": [
-    { "name": "LinkedIn",  "icon": "linkedin",  "url": "https://linkedin.com" },
-    { "name": "Twitter",   "icon": "twitter",   "url": "https://twitter.com" },
-    { "name": "Instagram", "icon": "instagram", "url": "https://instagram.com" },
-    { "name": "Facebook",  "icon": "facebook",  "url": "https://facebook.com" },
-    { "name": "YouTube",   "icon": "youtube",   "url": "https://youtube.com" }
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://linkedin.com"
+    },
+    {
+      "name": "Twitter",
+      "icon": "twitter",
+      "url": "https://twitter.com"
+    },
+    {
+      "name": "Instagram",
+      "icon": "instagram",
+      "url": "https://instagram.com"
+    },
+    {
+      "name": "Facebook",
+      "icon": "facebook",
+      "url": "https://facebook.com"
+    },
+    {
+      "name": "YouTube",
+      "icon": "youtube",
+      "url": "https://youtube.com"
+    }
   ],
   "nav": [
-    { "label": "Home",      "href": "#home" },
-    { "label": "About",     "href": "#about" },
-    { "label": "Services",  "href": "#services" },
-    { "label": "Portfolio", "href": "#portfolio" },
-    { "label": "Team",      "href": "#team" }
+    {
+      "label": "Home",
+      "href": "#home"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "Portfolio",
+      "href": "#portfolio"
+    },
+    {
+      "label": "Team",
+      "href": "#team"
+    }
   ],
   "footer": {
     "quickLinks": [
-      { "label": "Home",      "href": "#home" },
-      { "label": "About Us",  "href": "#about" },
-      { "label": "Services",  "href": "#services" },
-      { "label": "Portfolio", "href": "#portfolio" },
-      { "label": "Contact",   "href": "#contact" }
+      {
+        "label": "Home",
+        "icon": "<i class='fas fa-house'></i>",
+        "href": "#home"
+      },
+      {
+        "label": "About Us",
+        "icon": "<i class='fas fa-book'></i>",
+        "href": "#about"
+      },
+      {
+        "label": "Services",
+        "icon": "<i class='fas fa-list-check'></i>",
+        "href": "#services"
+      },
+      {
+        "label": "Portfolio",
+        "icon": "<i class='fas fa-briefcase'></i>",
+        "href": "#portfolio"
+      },
+      {
+        "label": "Contact",
+        "icon": "<i class='fas fa-phone'></i>",
+        "href": "#contact"
+      }
     ],
     "services": [
-      { "label": "SEO Optimization",    "href": "#services" },
-      { "label": "Paid Advertising",    "href": "#services" },
-      { "label": "Web Development",     "href": "#services" },
-      { "label": "AI Automation",       "href": "#services" },
-      { "label": "Brand Strategy",      "href": "#services" }
+      {
+        "label": "SEO Optimization",
+        "icon": "<i class='fas fa-search-dollar'></i>",
+        "href": "#services"
+      },
+      {
+        "label": "Paid Advertising",
+        "icon": "<i class='fas fa-ad'></i>",
+        "href": "#services"
+      },
+      {
+        "label": "Web Development",
+        "icon": "<i class='fas fa-code'></i>",
+        "href": "#services"
+      },
+      {
+        "label": "AI Automation",
+        "icon": "<i class='fas fa-robot'></i>",
+        "href": "#services"
+      },
+      {
+        "label": "Brand Strategy",
+        "icon": "<i class='fas fa-bullseye'></i>",
+        "href": "#services"
+      }
     ],
     "copyright": "© 2024 Kashif Agency. All Rights Reserved."
   }
