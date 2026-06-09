@@ -1,62 +1,92 @@
 [
   {
     "id": 1,
-    "category": "Web Development",
-    "title": "NexaBank Digital Platform",
-    "description": "Complete digital banking platform with AI-powered financial advisor, real-time analytics dashboard, and seamless mobile experience.",
+    "title": "SMI SOFTS",
+    "description": "SMI SOFTS is digital agency that specializes in providing cutting-edge digital solutions to businesses of all sizes. SMI SOFTS offers a wide range of services including web development, mobile app development, digital marketing, and AI-powered solutions.",
     "tags": ["React", "Node.js", "AI", "FinTech"],
-    "gradient": "linear-gradient(135deg, #00d4ff, #0051ff)",
+    "image": "smisofts.png",
     "icon": "monitor",
-    "result": "340% increase in digital signups"
+    "result": "340% increase in digital signups",
+    "link": "https://smisofts.com/"
   },
   {
     "id": 2,
-    "category": "SEO",
-    "title": "MedCare SEO Domination",
-    "description": "Comprehensive SEO campaign for a healthcare network that achieved 12 first-page rankings and tripled organic traffic within 6 months.",
+    "title": "MAPO Solutions",
+    "description": "MAPO Solutions is third party inspection services provider that offers comprehensive inspection, testing, and certification services to various industries including manufacturing, construction, energy, and transportation.",
     "tags": ["SEO", "Content", "Technical", "Healthcare"],
-    "gradient": "linear-gradient(135deg, #00ff88, #00d4ff)",
+    "image": "mapo-solutions.png",
     "icon": "search",
-    "result": "450% organic traffic growth"
+    "result": "450% organic traffic growth",
+    "link": "https://maposolutions.com/"
   },
   {
     "id": 3,
-    "category": "Branding",
-    "title": "Luxe Fashion Brand Identity",
-    "description": "Complete brand overhaul for a premium fashion brand including logo, visual identity, brand guidelines, packaging, and retail experience design.",
+    "title": "Regular Host",
+    "description": "Regular host is a web hosting company that provides reliable and affordable hosting solutions for individuals and businesses. Regular host offers a range of hosting services including shared hosting, VPS hosting, dedicated servers, and cloud hosting.",
     "tags": ["Branding", "Logo", "Visual Identity", "Fashion"],
-    "gradient": "linear-gradient(135deg, #ff6b6b, #ffd700)",
+    "image": "regular-host.png",
     "icon": "star",
-    "result": "Brand valuation +200%"
+    "result": "Brand valuation +200%",
+    "link": "https://regularhost.com/"
   },
   {
     "id": 4,
-    "category": "AI Automation",
-    "title": "RetailBot AI Customer System",
-    "description": "AI-powered chatbot and automation system for a major retail chain handling 10,000+ daily customer queries, order tracking, and support tickets.",
-    "tags": ["AI", "Automation", "ChatBot", "Retail"],
-    "gradient": "linear-gradient(135deg, #7c3aed, #00d4ff)",
-    "icon": "cpu",
-    "result": "85% support cost reduction"
+    "title": "MAPO Solutions",
+    "description": "MAPO Solutions is third party inspection services provider that offers comprehensive inspection, testing, and certification services to various industries including manufacturing, construction, energy, and transportation.",
+    "tags": ["SEO", "Content", "Technical", "Healthcare"],
+    "image": "mapo-solutions.png",
+    "icon": "search",
+    "result": "450% organic traffic growth",
+    "link": "https://maposolutions.com/"
   },
   {
     "id": 5,
-    "category": "Paid Media",
-    "title": "EduTech Growth Campaign",
-    "description": "Performance marketing campaign across Google, Meta, and YouTube for an EdTech platform that scaled from 500 to 50,000 students in 8 months.",
-    "tags": ["PPC", "Meta Ads", "Google Ads", "EdTech"],
-    "gradient": "linear-gradient(135deg, #ffd700, #ff8c00)",
-    "icon": "target",
-    "result": "10,000% student growth"
+    "title": "Regular Host",
+    "description": "Regular host is a web hosting company that provides reliable and affordable hosting solutions for individuals and businesses. Regular host offers a range of hosting services including shared hosting, VPS hosting, dedicated servers, and cloud hosting.",
+    "tags": ["Branding", "Logo", "Visual Identity", "Fashion"],
+    "image": "regular-host.png",
+    "icon": "star",
+    "result": "Brand valuation +200%",
+    "link": "https://regularhost.com/"
   },
   {
     "id": 6,
-    "category": "Software Development",
-    "title": "LogiTrack Enterprise Suite",
-    "description": "End-to-end logistics management software with real-time fleet tracking, AI route optimization, inventory management, and automated reporting.",
-    "tags": ["SaaS", "Logistics", "AI", "Enterprise"],
-    "gradient": "linear-gradient(135deg, #0051ff, #7c3aed)",
-    "icon": "layers",
-    "result": "60% operational efficiency gain"
+    "title": "SMI SOFTS",
+    "description": "SMI SOFTS is digital agency that specializes in providing cutting-edge digital solutions to businesses of all sizes. SMI SOFTS offers a wide range of services including web development, mobile app development, digital marketing, and AI-powered solutions.",
+    "tags": ["React", "Node.js", "AI", "FinTech"],
+    "image": "smisofts.png",
+    "icon": "monitor",
+    "result": "340% increase in digital signups",
+    "link": "https://smisofts.com/"
+  },
+  {
+    "id": 7,
+    "title": "Regular Host",
+    "description": "Regular host is a web hosting company that provides reliable and affordable hosting solutions for individuals and businesses. Regular host offers a range of hosting services including shared hosting, VPS hosting, dedicated servers, and cloud hosting.",
+    "tags": ["Branding", "Logo", "Visual Identity", "Fashion"],
+    "image": "regular-host.png",
+    "icon": "star",
+    "result": "Brand valuation +200%",
+    "link": "https://regularhost.com/"
+  },
+  {
+    "id": 8,
+    "title": "SMI SOFTS",
+    "description": "SMI SOFTS is digital agency that specializes in providing cutting-edge digital solutions to businesses of all sizes. SMI SOFTS offers a wide range of services including web development, mobile app development, digital marketing, and AI-powered solutions.",
+    "tags": ["React", "Node.js", "AI", "FinTech"],
+    "image": "smisofts.png",
+    "icon": "monitor",
+    "result": "340% increase in digital signups",
+    "link": "https://smisofts.com/"
+  },
+  {
+    "id": 9,
+    "title": "MAPO Solutions",
+    "description": "MAPO Solutions is third party inspection services provider that offers comprehensive inspection, testing, and certification services to various industries including manufacturing, construction, energy, and transportation.",
+    "tags": ["SEO", "Content", "Technical", "Healthcare"],
+    "image": "mapo-solutions.png",
+    "icon": "search",
+    "result": "450% organic traffic growth",
+    "link": "https://maposolutions.com/"
   }
 ]

@@ -195,6 +195,8 @@ function renderStats() {
   const s = DATA.content.stats;
   const si = document.getElementById("stat-inner");
 
+  if (!si) return;
+
   si.innerHTML = `
     <div class="container stats-container">
       <div class="row align-items-center g-5">
@@ -305,6 +307,144 @@ function renderAbout() {
       </div>
     </div>`;
 }
+/* ─────────────────────────────────────────────────────────
+   PORTFOLIO PAGINATION
+───────────────────────────────────────────────────────── */
+let currentProjects = 9;
+
+function renderPortfolio() {
+    const HOME_LIMIT = 3;
+
+    const vmbtn = DATA?.content?.cta;
+    const pp = DATA?.content?.pphero;
+    const portfolio = DATA?.portfolio || [];
+
+    const el = document.getElementById("portfolio-inner");
+    const heroPP = document.getElementById("hero-inner-pp");
+
+    if (!el || !portfolio.length) return;
+
+    const isPortfolioPage =
+        window.location.pathname.includes("portfolios.html");
+
+    const visibleProjects = isPortfolioPage
+        ? portfolio.slice(0, currentProjects)
+        : portfolio.slice(0, HOME_LIMIT);
+
+    // HERO SECTION
+    if (heroPP && pp) {
+        heroPP.innerHTML = `
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-12 hero-content reveal">
+                        <div class="orbit-ring ring-1">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit-ring ring-2">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit-ring ring-3">
+                            <div class="orbit-dot"></div>
+                        </div>
+
+                        <h1 class="pp-title">
+                            ${pp.headline}<br>
+                            <span class="line2">${pp.headlineHighlight}</span>
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            ${pp.description}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // PORTFOLIO SECTION
+    el.innerHTML = `
+        <div class="container">
+
+            ${
+                !isPortfolioPage
+                    ? `
+                    <div class="text-center reveal">
+                        <div class="section-badge">Our Work</div>
+                        <h2 class="section-title">
+                            Transformative <span class="highlight">Projects</span>
+                        </h2>
+                        <p class="section-desc mx-auto mt-3">
+                            A showcase of our most impactful work across industries and disciplines.
+                        </p>
+                    </div>
+                `
+                    : ""
+            }
+
+            <div class="portfolio-grid">
+                ${visibleProjects
+                    .map(
+                        (p) => `
+                    <div class="portfolio-card reveal">
+                        <div class="portfolio-thumb">
+                            <img
+                                src="assets/images/portfolio/${p.image}"
+                                alt="${p.title}"
+                                class="portfolio-img"
+                                loading="lazy"
+                            >
+
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <a href="${p.link}" target="_blank" rel="noopener">
+                                        <button class="portfolio-overlay-btn">
+                                            View Details
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-body">
+                            <h3 class="portfolio-title">${p.title}</h3>
+                            <p class="portfolio-desc">${p.description}</p>
+                        </div>
+                    </div>
+                `
+                    )
+                    .join("")}
+            </div>
+
+            <div class="cta-view-more text-center mt-5">
+                ${
+                    !isPortfolioPage
+                        ? `
+                        <a href="${vmbtn?.btn3?.href || '#'}" class="btn-outline">
+                            ${vmbtn?.btn3?.label || "View More"}
+                        </a>
+                    `
+                        : currentProjects < portfolio.length
+                        ? `
+                        `
+                        : ""
+                }
+            </div>
+
+        </div>
+    `;
+
+    // VIEW MORE BUTTON
+    if (isPortfolioPage) {
+        const loadMoreBtn = document.getElementById("loadMoreProjects");
+
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener("click", () => {
+                currentProjects += 3;
+                renderPortfolio();
+            });
+        }
+    }
+}
 
 /* ─────────────────────────────────────────────────────────
    SERVICES
@@ -346,83 +486,6 @@ function renderServices() {
 }
 
 /* ─────────────────────────────────────────────────────────
-   PORTFOLIO
-───────────────────────────────────────────────────────── */
-function renderPortfolio() {
-  const portfolio = DATA.portfolio;
-  const el = document.getElementById("portfolio-inner");
-  if (!el || !portfolio.length) return;
-
-  const cats = ["All", ...new Set(portfolio.map((p) => p.category))];
-
-  el.innerHTML = `
-    <div class="container">
-      <div class="text-center mb-5 reveal">
-        <div class="section-badge">Our Work</div>
-        <h2 class="section-title">Transformative <span class="highlight">Projects</span></h2>
-        <p class="section-desc mx-auto mt-3">A showcase of our most impactful work across industries and disciplines.</p>
-      </div>
-      <div class="portfolio-filters reveal">
-        ${cats.map((c) => `<button class="filter-btn${c === "All" ? " active" : ""}" data-filter="${c}">${c}</button>`).join("")}
-      </div>
-      <div class="portfolio-grid" id="portfolio-grid">
-        ${portfolio
-          .map(
-            (p, i) => `
-          <div class="portfolio-card reveal" data-category="${p.category}" style="transition-delay:${(i % 3) * 0.1}s">
-            <div class="portfolio-thumb" style="background:${p.gradient}">
-              <div class="portfolio-thumb-icon">${ic(p.icon, 32)}</div>
-              <div class="portfolio-overlay">
-                <div class="portfolio-overlay-content">
-                  <div class="portfolio-overlay-tags">${p.tags.map((t) => `<span>${t}</span>`).join("")}</div>
-                  <button class="portfolio-overlay-btn">View Details</button>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-body">
-              <span class="portfolio-category">${p.category}</span>
-              <h3 class="portfolio-title">${p.title}</h3>
-              <p class="portfolio-desc">${p.description}</p>
-              <div class="portfolio-footer">
-                <span class="portfolio-result">${ic("trending-up", 12)} ${p.result}</span>
-              </div>
-            </div>
-          </div>`,
-          )
-          .join("")}
-      </div>
-    </div>`;
-
-  el.querySelectorAll(".filter-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      el.querySelectorAll(".filter-btn").forEach((b) =>
-        b.classList.remove("active"),
-      );
-      btn.classList.add("active");
-      const f = btn.dataset.filter;
-      el.querySelectorAll(".portfolio-card").forEach((card) => {
-        const show = f === "All" || card.dataset.category === f;
-        card.style.opacity = "0";
-        card.style.transform = "scale(0.95)";
-        setTimeout(() => {
-          card.style.display = show ? "" : "none";
-          if (show)
-            requestAnimationFrame(() => {
-              card.style.opacity = "1";
-              card.style.transform = "scale(1)";
-            });
-        }, 150);
-      });
-    });
-  });
-
-  // Smooth transitions for portfolio cards
-  el.querySelectorAll(".portfolio-card").forEach((card) => {
-    card.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-  });
-}
-
-/* ─────────────────────────────────────────────────────────
    WHY US
 ───────────────────────────────────────────────────────── */
 function renderWhyUs() {
@@ -437,18 +500,7 @@ function renderWhyUs() {
         <h2 class="section-title">${w.headline} <span class="highlight">${w.headlineHighlight}</span></h2>
         <p class="section-desc mx-auto mt-3">Trusted by 300+ businesses across 15+ industries worldwide.</p>
       </div>
-      <div class="why-grid">
-        ${w.reasons
-          .map(
-            (r, i) => `
-          <div class="why-card reveal" style="transition-delay:${i * 0.1}s">
-            <div class="why-icon-wrap">${ic(r.icon)}</div>
-            <h3 class="why-title">${r.title}</h3>
-            <p class="why-desc">${r.desc}</p>
-          </div>`,
-          )
-          .join("")}
-      </div>
+      
     </div>`;
 }
 
@@ -718,7 +770,8 @@ function renderFAQ() {
             <div class="section-badge">FAQ</div>
             <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
             <p class="section-desc mt-3">Can't find your answer here? Reach out to us directly.</p>
-            <a href="#contact" class="btn-outline mt-4" style="display:inline-flex;align-items:center;gap:.5rem">${ic("mail", 16)} Ask Us Directly</a>
+            <a href="#contact" class="btn-outline mt-4" style="display:inline-flex;align-items:center;gap:.5rem">
+            <i class="fa-regular fa-comments"></i> Ask Us Directly</a>
           </div>
         </div>
         <div class="col-lg-8">
@@ -729,7 +782,7 @@ function renderFAQ() {
               <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                   <span>${f.question}</span>
-                  <span class="faq-icon" aria-hidden="true">${ic("plus", 16)}</span>
+                  <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-question"></i></span>
                 </button>
                 <div class="faq-answer" role="region">
                   <div class="faq-answer-inner">${f.answer}</div>
@@ -1129,8 +1182,8 @@ async function init() {
   renderHero();
   renderStats();
   renderAbout();
-  renderServices();
   renderPortfolio();
+  renderServices();
   renderWhyUs();
   renderAI();
   renderSEO();

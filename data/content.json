@@ -1,6 +1,5 @@
 {
   "hero": {
-    "badge": "AI-Powered Agency",
     "headline": "We Build Brands That",
     "headlineHighlight": "Dominate Markets",
     "subheadline": "20+ Years of Digital Excellence",
@@ -177,6 +176,14 @@
     "btn2": {
       "label": "View Case Studies",
       "href": "#portfolio"
+    },
+    "btn3": {
+      "label": "Explore Porjects",
+      "href": "portfolios.html"
+    },
+    "btn4": {
+      "label": "More",
+      "href": "#"
     }
   },
   "contact": {
@@ -212,5 +219,10 @@
       "AI Automation",
       "Business Consulting"
     ]
+  },
+  "pphero": {
+    "headline": "Our Works Speak",
+    "headlineHighlight": "Louder Than Words",
+    "description": "Discover how we turn ideas into powerful digital solution."
   }
 }
