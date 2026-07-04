@@ -1,0 +1,330 @@
+[
+  {
+    "id": "seo",
+    "icon": "search",
+    "category": "Marketing",
+    "title": "SEO & Google Ranking",
+    "description": "Dominate search results with our proven SEO strategies. We combine technical excellence, strategic content, and authority link building to rank your business on Page 1.",
+    "features": ["Technical Audit", "Keyword Strategy", "Link Building", "Local SEO"],
+    "color": "#00d4ff",
+    "badge": "Most Popular",
+    "stat": "200+",
+    "stat_label": "Sites Ranked",
+    "detail": {
+      "tag": "SEO & Ranking",
+      "title": "Rank Higher. Get Found. Grow Faster.",
+      "desc": "From technical audits to authority link building — we engineer search visibility that compounds over time and puts your business in front of the right audience.",
+      "tags": ["Technical SEO", "On-Page", "Link Building", "Local SEO", "Schema", "Core Web Vitals"],
+      "stats": [
+        { "v": "200+", "l": "Sites Ranked" },
+        { "v": "94%",  "l": "Page-1 Rate" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "3x",   "l": "Avg Traffic Lift" }
+      ],
+      "wide": { "v": "6-mo avg.", "l": "Time to measurable ranking gains on target keywords" },
+      "steps": [
+        { "icon": "search",   "title": "Audit",    "desc": "Full technical, on-page, and backlink audit to find every leak and opportunity." },
+        { "icon": "layers",   "title": "Strategy", "desc": "Keyword mapping, content gaps, and a priority-ranked roadmap built for your niche." },
+        { "icon": "code",     "title": "Execute",  "desc": "Technical fixes, content optimization, and outreach running in parallel sprints." },
+        { "icon": "chart",    "title": "Report",   "desc": "Monthly ranking reports, traffic analytics, and live dashboard access." }
+      ],
+      "plans": [
+        { "tier": "Local",     "price": "$499",   "period": "per month", "feats": ["10 target keywords", "On-page optimization", "Google Business setup", "Monthly report"], "featured": false, "badge": null },
+        { "tier": "Growth",    "price": "$1,200", "period": "per month", "feats": ["30 target keywords", "Technical SEO fixes", "Link building (5/mo)", "Content optimization", "Bi-weekly reports"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Authority", "price": "Custom", "period": "let's talk","feats": ["Unlimited keywords", "Full technical management", "Premium link building", "Dedicated SEO strategist", "Weekly calls"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "How long until I see results?",    "a": "Most clients see measurable movement in 60–90 days. Page-1 results on competitive terms typically take 4–6 months of consistent effort." },
+        { "q": "Do you work with any industry?",   "a": "Yes — we've ranked sites in e-commerce, SaaS, local services, real estate, and finance. Niche expertise actually helps us move faster." },
+        { "q": "Will you touch my website code?",  "a": "With your permission, yes. Technical fixes often require direct code access. We work in staging first and document every change." }
+      ]
+    }
+  },
+  {
+    "id": "smm",
+    "icon": "megaphone",
+    "category": "Marketing",
+    "title": "Social Media Marketing",
+    "description": "Build a loyal community and drive conversions with data-driven social media strategies across all major platforms — Instagram, LinkedIn, TikTok, Facebook, and more.",
+    "features": ["Content Strategy", "Community Management", "Influencer Marketing", "Analytics"],
+    "color": "#7c3aed",
+    "badge": null,
+    "stat": "50M+",
+    "stat_label": "Reach Generated",
+    "detail": {
+      "tag": "Social Media",
+      "title": "Content That Builds Communities.",
+      "desc": "We create and manage scroll-stopping content strategies that grow audiences, spark engagement, and convert followers into paying customers.",
+      "tags": ["Instagram", "LinkedIn", "TikTok", "Facebook", "Content Calendar", "Analytics"],
+      "stats": [
+        { "v": "50M+", "l": "Reach" },
+        { "v": "80+",  "l": "Brands" },
+        { "v": "4.8★", "l": "Rating" },
+        { "v": "3.2x", "l": "Avg Engagement" }
+      ],
+      "wide": { "v": "30-day avg.", "l": "Time to first measurable follower growth after onboarding" },
+      "steps": [
+        { "icon": "search",    "title": "Audit",    "desc": "Review existing channels, audience data, and competitor positioning." },
+        { "icon": "clipboard", "title": "Strategy", "desc": "Content pillars, posting cadence, platform mix, and tone of voice defined." },
+        { "icon": "edit",      "title": "Create",   "desc": "Graphic design, captions, reels scripts, and a full monthly content calendar." },
+        { "icon": "chart",     "title": "Grow",     "desc": "Community management, engagement loops, and monthly performance reviews." }
+      ],
+      "plans": [
+        { "tier": "Starter", "price": "$399",   "period": "per month", "feats": ["2 platforms", "12 posts/month", "Basic graphics", "Monthly report"], "featured": false, "badge": null },
+        { "tier": "Pro",     "price": "$899",   "period": "per month", "feats": ["4 platforms", "24 posts/month", "Reels & stories", "Community management", "Bi-weekly reports"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Agency",  "price": "Custom", "period": "let's talk","feats": ["All platforms", "Daily content", "Influencer outreach", "Paid social included", "Dedicated manager"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Do you create the content or just post it?", "a": "We handle the full pipeline — strategy, design, copy, scheduling, and community replies. You just approve the monthly calendar." },
+        { "q": "Which platforms do you cover?",              "a": "Instagram, Facebook, LinkedIn, TikTok, Twitter/X, and YouTube Shorts. We recommend the right mix based on your audience." },
+        { "q": "Can I keep my existing brand voice?",        "a": "Absolutely. Our onboarding includes a brand voice and tone-of-voice guide exercise so every piece of content sounds like you." }
+      ]
+    }
+  },
+  {
+    "id": "ads",
+    "icon": "target",
+    "category": "Advertising",
+    "title": "Paid Media & Advertising",
+    "description": "Maximize your advertising ROI with precision-targeted paid campaigns on Google, Meta, LinkedIn, and programmatic networks. Every rupee optimized for maximum return.",
+    "features": ["Google Ads", "Meta Ads", "LinkedIn Ads", "Programmatic"],
+    "color": "#ffd700",
+    "badge": "High ROI",
+    "stat": "4.1x",
+    "stat_label": "Avg ROAS",
+    "detail": {
+      "tag": "Paid Advertising",
+      "title": "Every Rupee Working Harder.",
+      "desc": "Precision-targeted campaigns across Google, Meta, LinkedIn, and programmatic networks — built to maximize conversions and minimize wasted spend.",
+      "tags": ["Google Ads", "Meta Ads", "LinkedIn Ads", "Programmatic", "Retargeting", "A/B Testing"],
+      "stats": [
+        { "v": "4.1x",  "l": "Avg ROAS" },
+        { "v": "$2M+",  "l": "Ad Spend Mgd" },
+        { "v": "60+",   "l": "Campaigns" },
+        { "v": "-34%",  "l": "Avg CPA Drop" }
+      ],
+      "wide": { "v": "14-day avg.", "l": "Time to first optimized campaign going live after kickoff" },
+      "steps": [
+        { "icon": "target",    "title": "Targeting", "desc": "Audience research, intent mapping, and custom segment building per platform." },
+        { "icon": "palette",   "title": "Creative",  "desc": "Ad copy, visuals, and video scripts optimized for each platform and funnel stage." },
+        { "icon": "rocket",    "title": "Launch",    "desc": "Campaigns go live with pixel tracking, conversion events, and budget pacing set." },
+        { "icon": "chart",     "title": "Optimize",  "desc": "Weekly bid adjustments, creative rotation, and A/B testing to keep ROAS climbing." }
+      ],
+      "plans": [
+        { "tier": "Launch",     "price": "$599",   "period": "per month", "feats": ["1 platform", "Up to $3K ad spend", "3 ad creatives", "Weekly optimization", "Monthly report"], "featured": false, "badge": null },
+        { "tier": "Scale",      "price": "$1,499", "period": "per month", "feats": ["3 platforms", "Up to $15K ad spend", "Full creative suite", "Retargeting setup", "A/B testing", "Bi-weekly calls"], "featured": true, "badge": "High ROI" },
+        { "tier": "Enterprise", "price": "Custom", "period": "let's talk","feats": ["All platforms", "Unlimited ad spend", "Programmatic access", "Dedicated media buyer", "Real-time dashboard"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is the ad spend included in your fee?",   "a": "No — our fee covers management. Ad spend goes directly to the platform (Google, Meta, etc.) and you have full visibility into every rupee." },
+        { "q": "How quickly can campaigns launch?",       "a": "Typically 10–14 days from kickoff. We spend the first week on research and creative, the second on setup, pixel verification, and compliance checks." },
+        { "q": "Can you take over existing campaigns?",   "a": "Yes. We do a full audit first, document what's working, pause what isn't, and rebuild the account structure before touching live budgets." }
+      ]
+    }
+  },
+  {
+    "id": "brand",
+    "icon": "palette",
+    "category": "Branding",
+    "title": "Branding & Strategy",
+    "description": "Create a brand identity that commands attention, builds trust, and resonates deeply with your target audience. From logo to complete brand guidelines.",
+    "features": ["Brand Identity", "Logo Design", "Brand Guidelines", "Messaging"],
+    "color": "#ff6b6b",
+    "badge": null,
+    "stat": "150+",
+    "stat_label": "Brands Built",
+    "detail": {
+      "tag": "Brand Identity",
+      "title": "Brands That People Remember.",
+      "desc": "From logo to full brand system — we craft visual identities and messaging frameworks that build instant trust and make you impossible to ignore.",
+      "tags": ["Logo Design", "Visual Identity", "Brand Guidelines", "Messaging", "Tone of Voice", "Stationery"],
+      "stats": [
+        { "v": "150+", "l": "Brands Built" },
+        { "v": "100%", "l": "Satisfaction" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "2wk",  "l": "Avg Turnaround" }
+      ],
+      "wide": { "v": "3 concepts", "l": "Initial logo directions presented in every branding project" },
+      "steps": [
+        { "icon": "clipboard", "title": "Discovery", "desc": "Brand questionnaire, competitor audit, and positioning workshop to define your space." },
+        { "icon": "palette",   "title": "Concept",   "desc": "3 distinct logo directions with moodboards, type pairings, and rationale." },
+        { "icon": "edit",      "title": "Refine",    "desc": "Two rounds of revisions on the chosen direction until it's exactly right." },
+        { "icon": "download",  "title": "Deliver",   "desc": "Full brand kit: SVG/PNG files, color codes, font licenses, and usage guidelines." }
+      ],
+      "plans": [
+        { "tier": "Identity",     "price": "$799",   "period": "one-time",  "feats": ["Logo (3 concepts)", "Color palette", "Typography system", "Business card design", "All file formats"], "featured": false, "badge": null },
+        { "tier": "Brand System", "price": "$1,800", "period": "one-time",  "feats": ["Everything in Identity", "Full brand guidelines", "Social media kit", "Email signature", "Stationery design", "Brand strategy doc"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Full Brand",   "price": "Custom", "period": "let's talk","feats": ["Complete rebrand", "Brand voice & messaging", "Website redesign", "Marketing collateral", "Launch campaign support"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "How many revisions do I get?",                                  "a": "Two full revision rounds after the concept presentation. Additional rounds can be added at a flat rate if needed." },
+        { "q": "Do I own the final files?",                                     "a": "100%. You receive all source files (AI, SVG, EPS, PNG) with full commercial ownership. No ongoing licensing fees." },
+        { "q": "Can you refresh an existing brand instead of starting fresh?",  "a": "Yes — brand evolution projects start with an audit of what to keep, modernize, or replace. Often faster and more cost-effective than a full rebrand." }
+      ]
+    }
+  },
+  {
+    "id": "web",
+    "icon": "code",
+    "category": "Technology",
+    "title": "Web Development",
+    "description": "Build lightning-fast, conversion-optimized websites and web applications using modern frameworks. Designed to rank, engage, and convert your ideal customers.",
+    "features": ["React / Next.js", "WordPress", "E-commerce", "Landing Pages"],
+    "color": "#00d4ff",
+    "badge": null,
+    "stat": "120+",
+    "stat_label": "Sites Launched",
+    "detail": {
+      "tag": "Web Development",
+      "title": "Sites & Apps That Perform.",
+      "desc": "From marketing pages to complex SaaS platforms — we build fast, accessible, and scalable web experiences engineered to grow with your business.",
+      "tags": ["React", "Next.js", "PHP", "Laravel", "REST APIs", "TypeScript", "MySQL"],
+      "stats": [
+        { "v": "120+", "l": "Projects" },
+        { "v": "99%",  "l": "On-time" },
+        { "v": "4.8★", "l": "Rating" },
+        { "v": "<2s",  "l": "Load time" }
+      ],
+      "wide": { "v": "3yr avg.", "l": "Client retention across all web projects" },
+      "steps": [
+        { "icon": "clipboard", "title": "Discovery",  "desc": "Goals, audience, tech stack, and timeline defined upfront with zero guesswork." },
+        { "icon": "layout",    "title": "Wireframe",  "desc": "UX structure and page flows mapped and signed off before any design begins." },
+        { "icon": "code",      "title": "Build",      "desc": "Clean, documented code with weekly progress drops and a shared preview link." },
+        { "icon": "rocket",    "title": "Launch",     "desc": "QA testing, deploy to production, and 30 days post-launch support included." }
+      ],
+      "plans": [
+        { "tier": "Starter",    "price": "$1,200", "period": "one-time",  "feats": ["5-page website", "Mobile responsive", "CMS integration", "1 revision round", "2-week delivery"], "featured": false, "badge": null },
+        { "tier": "Growth",     "price": "$3,500", "period": "one-time",  "feats": ["Up to 20 pages", "Custom functionality", "API integrations", "3 revision rounds", "SEO-ready structure"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Enterprise", "price": "Custom", "period": "let's talk","feats": ["Unlimited scope", "Dedicated dev team", "Monthly retainer", "Priority support", "SLA guarantee"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Do you work with existing codebases?", "a": "Yes — we regularly inherit projects and do audits before scoping work so there are no surprises." },
+        { "q": "What CMS do you use?",                 "a": "We default to headless CMSes like Sanity or Contentful, but can work with WordPress, Craft CMS, or custom admin panels." },
+        { "q": "Is hosting included?",                 "a": "We can set up and manage hosting on AWS, Vercel, or DigitalOcean — quoted separately based on traffic needs." }
+      ]
+    }
+  },
+  {
+    "id": "software",
+    "icon": "layers",
+    "category": "Technology",
+    "title": "Software Development",
+    "description": "Custom software solutions, mobile apps, SaaS platforms, and enterprise systems built with scalability and performance at their core.",
+    "features": ["Mobile Apps", "SaaS Platforms", "APIs", "ERP Systems"],
+    "color": "#7c3aed",
+    "badge": null,
+    "stat": "40+",
+    "stat_label": "Products Shipped",
+    "detail": {
+      "tag": "Software Development",
+      "title": "Custom Software. Real Scale.",
+      "desc": "Mobile apps, SaaS platforms, APIs, and enterprise systems — engineered from the ground up with scalability and long-term maintainability baked in.",
+      "tags": ["Flutter", "React Native", "Node.js", "Python", "PostgreSQL", "AWS", "Docker"],
+      "stats": [
+        { "v": "40+",   "l": "Products" },
+        { "v": "99.9%", "l": "Uptime SLA" },
+        { "v": "4.8★",  "l": "Rating" },
+        { "v": "12wk",  "l": "Avg MVP" }
+      ],
+      "wide": { "v": "4-sprint avg.", "l": "Time from spec to working MVP for most SaaS projects" },
+      "steps": [
+        { "icon": "clipboard", "title": "Spec",    "desc": "Feature list, user stories, data model, and architecture plan documented and signed off." },
+        { "icon": "layout",    "title": "Design",  "desc": "UI/UX wireframes and prototypes reviewed and approved before a line of code is written." },
+        { "icon": "code",      "title": "Build",   "desc": "2-week agile sprints with demo calls, a staging environment, and a shared task board." },
+        { "icon": "rocket",    "title": "Deploy",  "desc": "CI/CD pipeline, staging-to-production deploy, load testing, and 60-day warranty support." }
+      ],
+      "plans": [
+        { "tier": "MVP",        "price": "$5,000",  "period": "one-time",  "feats": ["Core feature set", "1 platform (web or mobile)", "Basic admin panel", "3-month warranty", "Source code handoff"], "featured": false, "badge": null },
+        { "tier": "Product",    "price": "$12,000", "period": "one-time",  "feats": ["Full feature scope", "Web + mobile", "Custom admin dashboard", "API documentation", "6-month warranty", "CI/CD pipeline"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Enterprise", "price": "Custom",  "period": "let's talk","feats": ["Dedicated team", "On-premise or cloud", "SLA & support contract", "Compliance & security audit", "Ongoing retainer"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Do we own the source code?",               "a": "Yes, 100%. Full source code is handed over at final delivery with no licensing restrictions." },
+        { "q": "What tech stack do you use?",              "a": "We recommend the best stack for your use case — typically React/Next.js on the frontend, Node.js or Python on the backend, and PostgreSQL or MongoDB for data." },
+        { "q": "Can you build on top of an existing system?", "a": "Yes. We start with a codebase audit, document the architecture, and scope new work accordingly. We handle legacy systems regularly." }
+      ]
+    }
+  },
+  {
+    "id": "ai",
+    "icon": "cpu",
+    "category": "AI",
+    "title": "AI Automation",
+    "description": "Automate repetitive business processes, marketing workflows, customer support, and data analysis using intelligent AI agents and workflow automation platforms.",
+    "features": ["Process Automation", "AI Agents", "n8n / Zapier", "CRM Automation"],
+    "color": "#00ff88",
+    "badge": "Trending",
+    "stat": "70%",
+    "stat_label": "Avg Time Saved",
+    "detail": {
+      "tag": "AI Automation",
+      "title": "Work Smarter. Ship Faster.",
+      "desc": "We automate your most time-consuming business processes with AI agents, workflow tools, and custom integrations — so your team can focus on what actually matters.",
+      "tags": ["n8n", "Zapier", "Make.com", "OpenAI API", "LangChain", "CRM Hooks", "Webhooks"],
+      "stats": [
+        { "v": "70%",     "l": "Time Saved" },
+        { "v": "30+",     "l": "Automations" },
+        { "v": "4.9★",   "l": "Rating" },
+        { "v": "2wk",     "l": "Avg Deploy" }
+      ],
+      "wide": { "v": "10hr/wk avg.", "l": "Hours saved per client per week after automation deployment" },
+      "steps": [
+        { "icon": "clipboard", "title": "Map",     "desc": "We document every manual process, identify automation candidates, and estimate ROI." },
+        { "icon": "cpu",       "title": "Design",  "desc": "Workflow diagrams built and reviewed before any integration work begins." },
+        { "icon": "code",      "title": "Build",   "desc": "Automations built and tested in a sandbox — no disruption to your live systems." },
+        { "icon": "chart",     "title": "Monitor", "desc": "Monitoring dashboard set up with alerts, error logs, and monthly health reviews." }
+      ],
+      "plans": [
+        { "tier": "Starter",    "price": "$799",   "period": "one-time",  "feats": ["3 automations", "2 tool integrations", "Email + Slack notifications", "30-day support"], "featured": false, "badge": null },
+        { "tier": "Growth",     "price": "$2,000", "period": "one-time",  "feats": ["10 automations", "Unlimited integrations", "AI agent setup", "CRM/ERP hooks", "Error monitoring", "60-day support"], "featured": true, "badge": "Trending" },
+        { "tier": "Enterprise", "price": "Custom", "period": "let's talk","feats": ["Unlimited automations", "Custom AI models", "Dedicated automation engineer", "SLA & uptime guarantee", "Ongoing retainer"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Do I need to know how to code?",    "a": "Not at all. We handle the full build. You describe the process in plain language and we translate it into a working automation." },
+        { "q": "Which tools can you integrate?",    "a": "Any tool with an API or webhook — CRMs like HubSpot/Salesforce, email tools, Slack, Google Workspace, WhatsApp Business, Shopify, and thousands more." },
+        { "q": "What if an automation breaks?",     "a": "All automations include error alerts. During the support window, we fix breaks for free. After that, we offer affordable monthly maintenance plans." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#ffd700",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  }
+]

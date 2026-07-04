@@ -1,82 +1,576 @@
 [
   {
-    "id": 1,
+    "id": "seo",
     "icon": "search",
     "category": "Marketing",
     "title": "SEO & Google Ranking",
     "description": "Dominate search results with our proven SEO strategies. We combine technical excellence, strategic content, and authority link building to rank your business on Page 1.",
     "features": ["Technical Audit", "Keyword Strategy", "Link Building", "Local SEO"],
-    "color": "#00d4ff",
-    "badge": "Most Popular"
+    "color": "#E5B80B",
+    "badge": "Most Popular",
+    "stat": "200+",
+    "stat_label": "Sites Ranked",
+    "detail": {
+      "tag": "SEO & Ranking",
+      "title": "Rank Higher. Get Found. Grow Faster.",
+      "desc": "From technical audits to authority link building — we engineer search visibility that compounds over time and puts your business in front of the right audience.",
+      "tags": ["Technical SEO", "On-Page", "Link Building", "Local SEO", "Schema", "Core Web Vitals"],
+      "stats": [
+        { "v": "200+", "l": "Sites Ranked" },
+        { "v": "94%",  "l": "Page-1 Rate" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "3x",   "l": "Avg Traffic Lift" }
+      ],
+      "wide": { "v": "6-mo avg.", "l": "Time to measurable ranking gains on target keywords" },
+      "steps": [
+        { "icon": "search",   "title": "Audit",    "desc": "Full technical, on-page, and backlink audit to find every leak and opportunity." },
+        { "icon": "layers",   "title": "Strategy", "desc": "Keyword mapping, content gaps, and a priority-ranked roadmap built for your niche." },
+        { "icon": "code",     "title": "Execute",  "desc": "Technical fixes, content optimization, and outreach running in parallel sprints." },
+        { "icon": "chart",    "title": "Report",   "desc": "Monthly ranking reports, traffic analytics, and live dashboard access." }
+      ],
+      "plans": [
+        { "tier": "Local",     "price": "$499",   "period": "per month", "feats": ["10 target keywords", "On-page optimization", "Google Business setup", "Monthly report"], "featured": false, "badge": null },
+        { "tier": "Growth",    "price": "$1,200", "period": "per month", "feats": ["30 target keywords", "Technical SEO fixes", "Link building (5/mo)", "Content optimization", "Bi-weekly reports"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Authority", "price": "Custom", "period": "let's talk","feats": ["Unlimited keywords", "Full technical management", "Premium link building", "Dedicated SEO strategist", "Weekly calls"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "How long until I see results?",    "a": "Most clients see measurable movement in 60–90 days. Page-1 results on competitive terms typically take 4–6 months of consistent effort." },
+        { "q": "Do you work with any industry?",   "a": "Yes — we've ranked sites in e-commerce, SaaS, local services, real estate, and finance. Niche expertise actually helps us move faster." },
+        { "q": "Will you touch my website code?",  "a": "With your permission, yes. Technical fixes often require direct code access. We work in staging first and document every change." }
+      ]
+    }
   },
   {
-    "id": 2,
+    "id": "smm",
     "icon": "megaphone",
     "category": "Marketing",
     "title": "Social Media Marketing",
     "description": "Build a loyal community and drive conversions with data-driven social media strategies across all major platforms — Instagram, LinkedIn, TikTok, Facebook, and more.",
     "features": ["Content Strategy", "Community Management", "Influencer Marketing", "Analytics"],
-    "color": "#7c3aed",
-    "badge": null
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "50M+",
+    "stat_label": "Reach Generated",
+    "detail": {
+      "tag": "Social Media",
+      "title": "Content That Builds Communities.",
+      "desc": "We create and manage scroll-stopping content strategies that grow audiences, spark engagement, and convert followers into paying customers.",
+      "tags": ["Instagram", "LinkedIn", "TikTok", "Facebook", "Content Calendar", "Analytics"],
+      "stats": [
+        { "v": "50M+", "l": "Reach" },
+        { "v": "80+",  "l": "Brands" },
+        { "v": "4.8★", "l": "Rating" },
+        { "v": "3.2x", "l": "Avg Engagement" }
+      ],
+      "wide": { "v": "30-day avg.", "l": "Time to first measurable follower growth after onboarding" },
+      "steps": [
+        { "icon": "search",    "title": "Audit",    "desc": "Review existing channels, audience data, and competitor positioning." },
+        { "icon": "clipboard", "title": "Strategy", "desc": "Content pillars, posting cadence, platform mix, and tone of voice defined." },
+        { "icon": "edit",      "title": "Create",   "desc": "Graphic design, captions, reels scripts, and a full monthly content calendar." },
+        { "icon": "chart",     "title": "Grow",     "desc": "Community management, engagement loops, and monthly performance reviews." }
+      ],
+      "plans": [
+        { "tier": "Starter", "price": "$399",   "period": "per month", "feats": ["2 platforms", "12 posts/month", "Basic graphics", "Monthly report"], "featured": false, "badge": null },
+        { "tier": "Pro",     "price": "$899",   "period": "per month", "feats": ["4 platforms", "24 posts/month", "Reels & stories", "Community management", "Bi-weekly reports"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Agency",  "price": "Custom", "period": "let's talk","feats": ["All platforms", "Daily content", "Influencer outreach", "Paid social included", "Dedicated manager"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Do you create the content or just post it?", "a": "We handle the full pipeline — strategy, design, copy, scheduling, and community replies. You just approve the monthly calendar." },
+        { "q": "Which platforms do you cover?",              "a": "Instagram, Facebook, LinkedIn, TikTok, Twitter/X, and YouTube Shorts. We recommend the right mix based on your audience." },
+        { "q": "Can I keep my existing brand voice?",        "a": "Absolutely. Our onboarding includes a brand voice and tone-of-voice guide exercise so every piece of content sounds like you." }
+      ]
+    }
   },
   {
-    "id": 3,
-    "icon": "target",
-    "category": "Advertising",
-    "title": "Paid Media & Advertising",
-    "description": "Maximize your advertising ROI with precision-targeted paid campaigns on Google, Meta, LinkedIn, and programmatic networks. Every rupee optimized for maximum return.",
-    "features": ["Google Ads", "Meta Ads", "LinkedIn Ads", "Programmatic"],
-    "color": "#ffd700",
-    "badge": "High ROI"
-  },
-  {
-    "id": 4,
-    "icon": "palette",
-    "category": "Branding",
-    "title": "Branding & Strategy",
-    "description": "Create a brand identity that commands attention, builds trust, and resonates deeply with your target audience. From logo to complete brand guidelines.",
-    "features": ["Brand Identity", "Logo Design", "Brand Guidelines", "Messaging"],
-    "color": "#ff6b6b",
-    "badge": null
-  },
-  {
-    "id": 5,
+    "id": "web",
     "icon": "code",
     "category": "Technology",
     "title": "Web Development",
     "description": "Build lightning-fast, conversion-optimized websites and web applications using modern frameworks. Designed to rank, engage, and convert your ideal customers.",
     "features": ["React / Next.js", "WordPress", "E-commerce", "Landing Pages"],
     "color": "#00d4ff",
-    "badge": null
+    "badge": null,
+    "stat": "120+",
+    "stat_label": "Sites Launched",
+    "detail": {
+      "tag": "Web Development",
+      "title": "Sites & Apps That Perform.",
+      "desc": "From marketing pages to complex SaaS platforms — we build fast, accessible, and scalable web experiences engineered to grow with your business.",
+      "tags": ["React", "Next.js", "PHP", "Laravel", "REST APIs", "TypeScript", "MySQL"],
+      "stats": [
+        { "v": "120+", "l": "Projects" },
+        { "v": "99%",  "l": "On-time" },
+        { "v": "4.8★", "l": "Rating" },
+        { "v": "<2s",  "l": "Load time" }
+      ],
+      "wide": { "v": "3yr avg.", "l": "Client retention across all web projects" },
+      "steps": [
+        { "icon": "clipboard", "title": "Discovery",  "desc": "Goals, audience, tech stack, and timeline defined upfront with zero guesswork." },
+        { "icon": "layout",    "title": "Wireframe",  "desc": "UX structure and page flows mapped and signed off before any design begins." },
+        { "icon": "code",      "title": "Build",      "desc": "Clean, documented code with weekly progress drops and a shared preview link." },
+        { "icon": "rocket",    "title": "Launch",     "desc": "QA testing, deploy to production, and 30 days post-launch support included." }
+      ],
+      "plans": [
+        { "tier": "Starter",    "price": "$1,200", "period": "one-time",  "feats": ["5-page website", "Mobile responsive", "CMS integration", "1 revision round", "2-week delivery"], "featured": false, "badge": null },
+        { "tier": "Growth",     "price": "$3,500", "period": "one-time",  "feats": ["Up to 20 pages", "Custom functionality", "API integrations", "3 revision rounds", "SEO-ready structure"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Enterprise", "price": "Custom", "period": "let's talk","feats": ["Unlimited scope", "Dedicated dev team", "Monthly retainer", "Priority support", "SLA guarantee"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Do you work with existing codebases?", "a": "Yes — we regularly inherit projects and do audits before scoping work so there are no surprises." },
+        { "q": "What CMS do you use?",                 "a": "We default to headless CMSes like Sanity or Contentful, but can work with WordPress, Craft CMS, or custom admin panels." },
+        { "q": "Is hosting included?",                 "a": "We can set up and manage hosting on AWS, Vercel, or DigitalOcean — quoted separately based on traffic needs." }
+      ]
+    }
   },
   {
-    "id": 6,
-    "icon": "layers",
-    "category": "Technology",
-    "title": "Software Development",
-    "description": "Custom software solutions, mobile apps, SaaS platforms, and enterprise systems built with scalability and performance at their core.",
-    "features": ["Mobile Apps", "SaaS Platforms", "APIs", "ERP Systems"],
-    "color": "#7c3aed",
-    "badge": null
-  },
-  {
-    "id": 7,
-    "icon": "cpu",
-    "category": "AI",
-    "title": "AI Automation",
-    "description": "Automate repetitive business processes, marketing workflows, customer support, and data analysis using intelligent AI agents and workflow automation platforms.",
-    "features": ["Process Automation", "AI Agents", "n8n / Zapier", "CRM Automation"],
-    "color": "#00ff88",
-    "badge": "Trending"
-  },
-  {
-    "id": 8,
+    "id": "consulting",
     "icon": "briefcase",
     "category": "Consulting",
     "title": "Business Consulting",
     "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
     "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
-    "color": "#ffd700",
-    "badge": null
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "briefcase",
+    "category": "Consulting",
+    "title": "Business Consulting",
+    "description": "Strategic business consulting to accelerate growth, enter new markets, optimize operations, and build sustainable competitive advantages in your industry.",
+    "features": ["Growth Strategy", "Market Research", "GTM Planning", "Operations"],
+    "color": "#00ff88",
+    "badge": null,
+    "stat": "3.8x",
+    "stat_label": "Avg Growth",
+    "detail": {
+      "tag": "Business Consulting",
+      "title": "Strategy That Actually Executes.",
+      "desc": "We don't hand you a slide deck and disappear. Our consulting embeds strategy into your operations — from market entry to team structure to GTM execution.",
+      "tags": ["Growth Strategy", "Market Research", "GTM Planning", "Operations", "Financial Modeling", "OKRs"],
+      "stats": [
+        { "v": "3.8x", "l": "Avg Growth" },
+        { "v": "50+",  "l": "Engagements" },
+        { "v": "4.9★", "l": "Rating" },
+        { "v": "90d",  "l": "First Results" }
+      ],
+      "wide": { "v": "90-day avg.", "l": "Time to measurable business impact from strategy engagement start" },
+      "steps": [
+        { "icon": "search",    "title": "Diagnose", "desc": "Business audit covering revenue model, team, operations, and market position." },
+        { "icon": "layers",    "title": "Plan",     "desc": "90-day roadmap with prioritized initiatives, owners, and measurable success metrics." },
+        { "icon": "rocket",    "title": "Execute",  "desc": "We embed with your team to drive initiatives, unblock decisions, and maintain momentum." },
+        { "icon": "chart",     "title": "Review",   "desc": "Monthly reviews against OKRs with course corrections and next-quarter planning." }
+      ],
+      "plans": [
+        { "tier": "Clarity",  "price": "$1,500", "period": "one-time",  "feats": ["Business audit", "2-hour strategy session", "90-day action plan", "Priority matrix", "Written report"], "featured": false, "badge": null },
+        { "tier": "Growth",   "price": "$3,500", "period": "per month", "feats": ["Monthly retainer", "Weekly strategy calls", "GTM execution support", "Financial model", "Team OKR setup", "Slack access"], "featured": true, "badge": "Most Popular" },
+        { "tier": "Partner",  "price": "Custom", "period": "let's talk","feats": ["Fractional COO/CMO", "Embedded execution", "Investor pitch support", "M&A advisory", "Long-term engagement"], "featured": false, "badge": null }
+      ],
+      "faqs": [
+        { "q": "Is this just a strategy report or real execution?", "a": "Real execution. We stay involved through the entire 90-day roadmap — attending team meetings, reviewing decisions, and tracking against milestones weekly." },
+        { "q": "What industries do you work with?",                 "a": "E-commerce, SaaS, services businesses, agencies, and startups across Pakistan, UAE, UK, and North America." },
+        { "q": "How is this different from hiring a consultant?",   "a": "We work with your existing team as an extension, not advisors on the sideline. You get senior-level thinking without the full-time salary." }
+      ]
+    }
   }
 ]

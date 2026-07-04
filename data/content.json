@@ -56,7 +56,7 @@
         "desc": "Awards Details"
       },
       {
-        "icon": "<i class=\"fas fa-award\"></i>",
+        "icon": "<i class=\"fas fa-headset\"></i>",
         "title": "Awards",
         "desc": "Awards Details"
       }
@@ -69,33 +69,23 @@
     "reasons": [
       {
         "icon": "zap",
-        "title": "AI-Powered Strategies",
-        "desc": "We use advanced AI and data analytics to create hyper-targeted campaigns that outperform the competition."
-      },
-      {
-        "icon": "shield",
-        "title": "Proven Track Record",
-        "desc": "500+ successful projects and 20+ years of consistently delivering above-expectation results."
-      },
-      {
-        "icon": "globe",
         "title": "Full-Service Agency",
         "desc": "From SEO to AI automation — one agency handles everything, ensuring perfect brand consistency."
       },
       {
-        "icon": "bar-chart-2",
-        "title": "Data-Driven Decisions",
-        "desc": "Every strategy is backed by deep data analysis, A/B testing, and performance tracking."
+        "icon": "<i class=\"far fa-clipboard\"></i>",
+        "title": "Proven Track Record",
+        "desc": "500+ successful projects and 20+ years of consistently delivering above-expectation results."
       },
       {
-        "icon": "clock",
-        "title": "24/7 Support",
-        "desc": "Dedicated account managers and round-the-clock support to keep your business running smoothly."
-      },
-      {
-        "icon": "star",
+        "icon": "<i class=\"fas fa-star\"></i>",
         "title": "Premium Quality",
         "desc": "We never compromise on quality — every deliverable meets the highest international standards."
+      },
+      {
+        "icon": "<i class=\"fas fa-headset\"></i>",
+        "title": "24/7 Support",
+        "desc": "Dedicated account managers and round-the-clock support to keep your business running smoothly."
       }
     ]
   },
@@ -224,5 +214,10 @@
     "headline": "Our Works Speak",
     "headlineHighlight": "Louder Than Words",
     "description": "Discover how we turn ideas into powerful digital solution."
+  },
+  "sshero": {
+    "headline": "Services",
+    "headlineHighlight": "What We Offer",
+    "description": "Explore our comprehensive suite of digital marketing, web development, and AI solutions designed to elevate your brand and drive measurable results."
   }
 }

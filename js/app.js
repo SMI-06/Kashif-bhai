@@ -307,182 +307,532 @@ function renderAbout() {
       </div>
     </div>`;
 }
+
 /* ─────────────────────────────────────────────────────────
-   PORTFOLIO PAGINATION
+  Portfolio
 ───────────────────────────────────────────────────────── */
 let currentProjects = 9;
 
 function renderPortfolio() {
-    const HOME_LIMIT = 3;
+  const HOME_LIMIT = 3;
+  const vmbtn = DATA?.content?.cta;
+  const pp = DATA?.content?.pphero;
+  const portfolio = DATA?.portfolio || [];
 
-    const vmbtn = DATA?.content?.cta;
-    const pp = DATA?.content?.pphero;
-    const portfolio = DATA?.portfolio || [];
+  const el = document.getElementById("portfolio-inner");
+  const heroPP = document.getElementById("hero-inner-pp");
 
-    const el = document.getElementById("portfolio-inner");
-    const heroPP = document.getElementById("hero-inner-pp");
+  if (!el || !portfolio.length) return;
 
-    if (!el || !portfolio.length) return;
+  const isPortfolioPage = window.location.pathname.includes("portfolios.html");
+  const visibleProjects = isPortfolioPage
+    ? portfolio.slice(0, currentProjects)
+    : portfolio.slice(0, HOME_LIMIT);
 
-    const isPortfolioPage =
-        window.location.pathname.includes("portfolios.html");
-
-    const visibleProjects = isPortfolioPage
-        ? portfolio.slice(0, currentProjects)
-        : portfolio.slice(0, HOME_LIMIT);
-
-    // HERO SECTION
-    if (heroPP && pp) {
-        heroPP.innerHTML = `
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-12 hero-content reveal">
-                        <div class="orbit-ring ring-1">
-                            <div class="orbit-dot"></div>
-                        </div>
-                        <div class="orbit-ring ring-2">
-                            <div class="orbit-dot"></div>
-                        </div>
-                        <div class="orbit-ring ring-3">
-                            <div class="orbit-dot"></div>
-                        </div>
-
-                        <h1 class="pp-title">
-                            ${pp.headline}<br>
-                            <span class="line2">${pp.headlineHighlight}</span>
-                        </h1>
-
-                        <p class="hero-subtitle">
-                            ${pp.description}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    // PORTFOLIO SECTION
-    el.innerHTML = `
-        <div class="container">
-
-            ${
-                !isPortfolioPage
-                    ? `
-                    <div class="text-center reveal">
-                        <div class="section-badge">Our Work</div>
-                        <h2 class="section-title">
-                            Transformative <span class="highlight">Projects</span>
-                        </h2>
-                        <p class="section-desc mx-auto mt-3">
-                            A showcase of our most impactful work across industries and disciplines.
-                        </p>
-                    </div>
-                `
-                    : ""
-            }
-
-            <div class="portfolio-grid">
-                ${visibleProjects
-                    .map(
-                        (p) => `
-                    <div class="portfolio-card reveal">
-                        <div class="portfolio-thumb">
-                            <img
-                                src="assets/images/portfolio/${p.image}"
-                                alt="${p.title}"
-                                class="portfolio-img"
-                                loading="lazy"
-                            >
-
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-content">
-                                    <a href="${p.link}" target="_blank" rel="noopener">
-                                        <button class="portfolio-overlay-btn">
-                                            View Details
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-body">
-                            <h3 class="portfolio-title">${p.title}</h3>
-                            <p class="portfolio-desc">${p.description}</p>
-                        </div>
-                    </div>
-                `
-                    )
-                    .join("")}
-            </div>
-
-            <div class="cta-view-more text-center mt-5">
-                ${
-                    !isPortfolioPage
-                        ? `
-                        <a href="${vmbtn?.btn3?.href || '#'}" class="btn-outline">
-                            ${vmbtn?.btn3?.label || "View More"}
-                        </a>
-                    `
-                        : currentProjects < portfolio.length
-                        ? `
-                        `
-                        : ""
-                }
-            </div>
-
+  /* ── HERO ── */
+  if (heroPP && pp) {
+    heroPP.innerHTML = `
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-12 hero-content reveal">
+            <div class="orbit-ring ring-1"><div class="orbit-dot"></div></div>
+            <div class="orbit-ring ring-2"><div class="orbit-dot"></div></div>
+            <div class="orbit-ring ring-3"><div class="orbit-dot"></div></div>
+            <h1 class="pp-title">${pp.headline}<br><span class="line2">${pp.headlineHighlight}</span></h1>
+            <p class="hero-subtitle">${pp.description}</p>
+          </div>
         </div>
-    `;
+      </div>`;
+  }
 
-    // VIEW MORE BUTTON
-    if (isPortfolioPage) {
-        const loadMoreBtn = document.getElementById("loadMoreProjects");
+  /* ── PORTFOLIO SECTION ── */
+  el.innerHTML = `
+    <div class="container">
 
-        if (loadMoreBtn) {
-            loadMoreBtn.addEventListener("click", () => {
-                currentProjects += 3;
-                renderPortfolio();
-            });
+      ${
+        !isPortfolioPage
+          ? `
+        <div class="text-center mb-5 reveal">
+          <div class="section-badge">Our Work</div>
+          <h2 class="section-title">Transformative <span class="highlight">Projects</span></h2>
+          <p class="section-desc mx-auto mt-3">A showcase of our most impactful work across industries and disciplines.</p>
+        </div>`
+          : ""
+      }
+
+      <div class="portfolio-grid">
+        ${visibleProjects.map((p, i) => buildCardHTML(p, i)).join("")}
+      </div>
+
+      <div class="cta-view-more text-center mt-5">
+        ${
+          !isPortfolioPage
+            ? `<a href="${vmbtn?.btn3?.href || "#"}" class="btn-outline">${vmbtn?.btn3?.label || "View More"}</a>`
+            : currentProjects < portfolio.length
+              ? `<button id="loadMoreProjects" class="btn-outline">Load More</button>`
+              : ""
         }
+      </div>
+    </div>`;
+
+  /* ── Bind interactions after DOM is ready ── */
+  initPortfolioTilt();
+  initCursorGlow();
+
+  /* ── Load more (portfolio page only) ── */
+  if (isPortfolioPage) {
+    const btn = document.getElementById("loadMoreProjects");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        currentProjects += 3;
+        renderPortfolio();
+      });
     }
+  }
 }
 
 /* ─────────────────────────────────────────────────────────
-   SERVICES
+   buildCardHTML — generates one card's markup string
 ───────────────────────────────────────────────────────── */
+function buildCardHTML(p, i) {
+  const delay = (i % 3) * 0.1; // stagger within each row of 3
+
+  const tagsHTML = p.tags?.length
+    ? `<div class="pf-tags">${p.tags.map((t) => `<span class="pf-tag">${t}</span>`).join("")}</div>`
+    : "";
+
+  const catHTML = p.category
+    ? `<span class="pf-pill">${p.category}</span>`
+    : "";
+
+  return `
+    <div class="portfolio-card reveal" style="animation-delay:${delay}s">
+      <div class="pf-frame">
+
+        <div class="pf-screen">
+          <!-- Cursor-tracking glow dot (positioned by JS) -->
+          <div class="pf-cursor-glow"></div>
+
+          <img src="assets/images/portfolio/${p.image}" alt="${p.title}" loading="lazy">
+          ${catHTML}
+          <!-- View-project button — fades in on hover -->
+          <div class="pf-overlay">
+            <a href="${p.link}" class="pf-overlay-btn" target="_blank" rel="noopener">
+              View Project
+              <svg viewBox="0 0 12 12">
+                <line x1="2" y1="10" x2="10" y2="2"/>
+                <polyline points="4,2 10,2 10,8"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="pf-body">
+          <span class="pf-num">${String(i + 1).padStart(2, "0")}</span>
+          <h3 class="pf-title">${p.title}</h3>
+          <p class="pf-desc">${p.description}</p>
+        </div>
+
+      </div>
+    </div>`;
+}
+
+function initPortfolioTilt() {
+  document.querySelectorAll(".portfolio-card").forEach((card) => {
+    const frame = card.querySelector(".pf-frame");
+    if (!frame) return;
+
+    card.addEventListener("mousemove", (e) => {
+      const r = frame.getBoundingClientRect();
+      const dx = (e.clientX - r.left - r.width / 2) / (r.width / 2);
+      const dy = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+
+      frame.style.transform = `rotateY(${dx * 9}deg) rotateX(${-dy * 6}deg) scale(1.02)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      frame.style.transform = "";
+    });
+  });
+}
+
+function initCursorGlow() {
+  document.querySelectorAll(".portfolio-card").forEach((card) => {
+    const screen = card.querySelector(".pf-screen");
+    const glow = card.querySelector(".pf-cursor-glow");
+    if (!screen || !glow) return;
+
+    screen.addEventListener("mousemove", (e) => {
+      const r = screen.getBoundingClientRect();
+      glow.style.left = e.clientX - r.left + "px";
+      glow.style.top = e.clientY - r.top + "px";
+      glow.style.opacity = "1";
+    });
+
+    screen.addEventListener("mouseleave", () => {
+      glow.style.opacity = "0";
+    });
+  });
+}
+
+/* ─────────────────────────────────────────────────────────
+SERVICES
+───────────────────────────────────────────────────────── */
+
+function icon(name) {
+  const icons = {
+    /* ── service category icons ── */
+    search: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>`,
+    megaphone: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>`,
+    target: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>`,
+    palette: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>`,
+    code: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+    layers: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
+    cpu: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>`,
+    briefcase: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 12h.01"/></svg>`,
+    /* ── step icons ── */
+    chart: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
+    rocket: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>`,
+    clipboard: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>`,
+    layout: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>`,
+    edit: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`,
+    download: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`,
+  };
+  return icons[name] || "";
+}
+
+/* ══════════════════════════════════════════════════════════════
+   HOME PAGE
+   ══════════════════════════════════════════════════════════════ */
+
 function renderServices() {
   const services = DATA.services;
   const el = document.getElementById("services-inner");
-  if (!el || !services.length) return;
+  if (!el || !services || !services.length) return;
 
   el.innerHTML = `
     <div class="container">
       <div class="text-center mb-5 reveal">
         <div class="section-badge">What We Do</div>
         <h2 class="section-title">Full-Spectrum Digital <span class="highlight">Solutions</span></h2>
-        <p class="section-desc mx-auto mt-3">Everything your business needs to dominate the digital landscape — all under one roof.</p>
+        <p class="section-desc mx-auto mt-3">Everything your business needs to dominate the digital landscape.</p>
       </div>
-      <div class="services-grid">
+      <div class="sh-panels" id="sh-panels">
         ${services
           .map(
             (s, i) => `
-          <div class="service-card reveal" style="transition-delay:${i * 0.08}s">
-            ${s.badge ? `<span class="service-badge">${s.badge}</span>` : ""}
-            <div class="service-card-glow" style="background:radial-gradient(circle at top right,${s.color}20,transparent 60%)"></div>
-            <div class="service-icon-wrap" style="background:${s.color}15;border-color:${s.color}30;color:${s.color}">
-              ${ic(s.icon)}
+          <div class="sh-panel${i === 0 ? " active" : ""}" data-index="${i}" style="--ac:${s.color}">
+            <div class="sh-glow" style="background:${s.color}"></div>
+            <div class="sh-accent-bar" style="background:${s.color}"></div>
+            <div class="sh-collapsed-num">0${i + 1}</div>
+            <div class="sh-collapsed-label">${s.title}</div>
+            ${s.badge ? `<span class="sh-badge" style="background:${s.color}20;color:${s.color};border:1px solid ${s.color}35">${s.badge}</span>` : ""}
+            <div class="sh-content">
+              <div class="sh-top">
+                <div class="sh-num">0${i + 1}</div>
+                <div class="sh-icon" style="background:${s.color}15;border:1px solid ${s.color}25;color:${s.color}">${icon(s.icon)}</div>
+                <div class="sh-cat" style="color:${s.color}">${s.category}</div>
+                <h3 class="sh-title">${s.title}</h3>
+                <p class="sh-desc">${s.description}</p>
+              </div>
+              <div class="sh-bottom">
+                <div class="sh-tags">${s.features.map((f) => `<span class="sh-tag">${f}</span>`).join("")}</div>
+                <div class="sh-footer">
+                  <div class="sh-stat">
+                    <div class="sh-stat-val" style="color:${s.color}">${s.stat || "—"}</div>
+                    <div class="sh-stat-label">${s.stat_label || "Projects"}</div>
+                  </div>
+                  <button class="sh-cta" style="color:${s.color}">Explore →</button>
+                </div>
+              </div>
             </div>
-            <div class="service-category">${s.category}</div>
-            <h3 class="service-title">${s.title}</h3>
-            <p class="service-desc">${s.description}</p>
-            <div class="service-features">
-              ${s.features.map((f) => `<span class="service-feature-tag">${f}</span>`).join("")}
-            </div>
-            <div class="service-arrow" style="color:${s.color}">${ic("arrow-right", 16)}</div>
           </div>`,
           )
           .join("")}
       </div>
+      <div class="sh-dots">
+        ${services
+          .map(
+            (s, i) => `
+          <div class="sh-dot${i === 0 ? " active" : ""}" data-index="${i}"
+               style="${i === 0 ? `background:${s.color}` : ""}"></div>`,
+          )
+          .join("")}
+      </div>
     </div>`;
+
+  const panelEls = el.querySelectorAll(".sh-panel");
+  const dotEls = el.querySelectorAll(".sh-dot");
+
+  function setActive(idx) {
+    panelEls.forEach((p, i) => p.classList.toggle("active", i === idx));
+    dotEls.forEach((d, i) => {
+      d.classList.toggle("active", i === idx);
+      d.style.background =
+        i === idx ? services[i].color : "rgba(255,255,255,0.15)";
+    });
+  }
+
+  panelEls.forEach((p, i) => p.addEventListener("click", () => setActive(i)));
+  dotEls.forEach((d, i) => d.addEventListener("click", () => setActive(i)));
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SERVICES DETAIL PAGE — Tabbed Full-Section Layout
+   ══════════════════════════════════════════════════════════════ */
+
+function renderServicesDetail() {
+  const services = DATA.services;
+  const tabNav = document.getElementById("sp-tab-nav");
+  const sections = document.getElementById("services-inner-detailed");
+  if (!tabNav || !sections || !services || !services.length) return;
+
+  const ss = DATA?.content?.sshero;
+  const headerSS = document.getElementById("hero-inner-services");
+  if (headerSS && ss) {
+    headerSS.innerHTML = `
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-12 hero-content reveal">
+            <div class="orbit-ring ring-1"><div class="orbit-dot"></div></div>
+            <div class="orbit-ring ring-2"><div class="orbit-dot"></div></div>
+            <div class="orbit-ring ring-3"><div class="orbit-dot"></div></div>
+            <h1 class="pp-title">${ss.headline}<br><span class="line2">${ss.headlineHighlight}</span></h1>
+            <p class="hero-subtitle">${ss.description}</p>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  const arrowRight = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+  const checkIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+  const plusIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>`;
+
+  /* Reveal observer — defined before setActiveTab so it can call it */
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in-view");
+          observer.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.08 },
+  );
+
+  function observeReveals() {
+    sections
+      .querySelectorAll(".sp-section.visible .reveal:not(.in-view)")
+      .forEach((el) => observer.observe(el));
+  }
+
+  function setActiveTab(id) {
+    tabNav
+      .querySelectorAll(".sp-tab")
+      .forEach((t) => t.classList.remove("active"));
+    sections
+      .querySelectorAll(".sp-section")
+      .forEach((s) => s.classList.remove("visible"));
+    tabNav.querySelector(`[data-id="${id}"]`).classList.add("active");
+    document.getElementById(`sec-${id}`).classList.add("visible");
+    setTimeout(observeReveals, 50);
+  }
+
+  services.forEach((s, i) => {
+    const d = s.detail;
+    if (!d) {
+      console.warn(`"${s.id}" has no detail object — skipped`);
+      return;
+    }
+
+    /* TAB */
+    const tab = document.createElement("button");
+    tab.className = "sp-tab" + (i === 0 ? " active" : "");
+    tab.setAttribute("data-id", s.id);
+    tab.innerHTML = icon(s.icon) + s.title;
+    tab.addEventListener("click", () => setActiveTab(s.id));
+    tabNav.appendChild(tab);
+
+    /* SECTION */
+    const sec = document.createElement("div");
+    sec.className = "sp-section" + (i === 0 ? " visible" : "");
+    sec.id = `sec-${s.id}`;
+    sec.style.setProperty("--sc", s.color);
+
+    sec.innerHTML = `
+      <div class="container">
+        <!-- HERO -->
+        <div class="sp-hero">
+          <div class="sp-hero-left reveal">
+            <div class="sp-hero-tag">${icon(s.icon)} ${d.tag}</div>
+            <h2 class="sp-hero-title">${d.title}</h2>
+            <p class="sp-hero-desc">${d.desc}</p>
+            <div class="sp-tech-tags">${d.tags.map((t) => `<span class="sp-tech-tag">${t}</span>`).join("")}</div>
+            <div class="sp-cta-row">
+              <a href="contact.html" class="sp-btn-primary" style="background:${s.color};color:#060911">Get a quote ${arrowRight}</a>
+            </div>
+          </div>
+          <div class="sp-hero-right reveal">
+            <div class="sp-stats-grid">
+              ${d.stats
+                .map(
+                  (st) => `
+                <div class="sp-stat">
+                  <div class="sp-stat-val" style="color:${s.color}">${st.v}</div>
+                  <div class="sp-stat-label">${st.l}</div>
+                </div>`,
+                )
+                .join("")}
+            </div>
+            <div class="sp-stat-wide">
+              <span class="sp-stat-wide-label">${d.wide.l}</span>
+              <span class="sp-stat-wide-val" style="color:${s.color}">${d.wide.v}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROCESS -->
+        <div class="sp-block reveal">
+          <div class="sp-block-label" style="color:${s.color};">How it works</div>
+          <div class="sp-process">
+            ${d.steps
+              .map(
+                (st, si) => `
+              <div class="sp-step">
+                ${
+                  si < d.steps.length - 1
+                    ? `
+                  <div class="sp-step-connector">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </div>`
+                    : ""
+                }
+                <div class="sp-step-ghost">0${si + 1}</div>
+                <div class="sp-step-icon-wrap" style="background:${s.color}12;border:1px solid ${s.color}20;color:${s.color}">
+                  ${icon(st.icon)}
+                </div>
+                <div class="sp-step-title">${st.title}</div>
+                <div class="sp-step-desc">${st.desc}</div>
+              </div>`,
+              )
+              .join("")}
+          </div>
+        </div>
+
+        <!-- PRICING -->
+        <div class="sp-block reveal">
+          <div class="sp-block-label" style="color:${s.color};">Pricing</div>
+          <div class="sp-plans">
+            ${d.plans
+              .map(
+                (p) => `
+              <div class="sp-plan${p.featured ? " featured" : ""}">
+                ${p.badge ? `<div class="sp-plan-badge" style="background:${s.color}18;color:${s.color};border:1px solid ${s.color}30">${p.badge}</div>` : ""}
+                <div class="sp-plan-tier">${p.tier}</div>
+                <div class="sp-plan-price">${p.price}</div>
+                <div class="sp-plan-period">${p.period}</div>
+                <div class="sp-plan-divider"></div>
+                <div class="sp-plan-feats">
+                  ${p.feats
+                    .map(
+                      (f) => `
+                    <div class="sp-plan-feat">
+                      <span style="color:${s.color};flex-shrink:0;margin-top:1px">${checkIcon}</span>
+                      ${f}
+                    </div>`,
+                    )
+                    .join("")}
+                </div>
+                <button class="sp-plan-btn${p.featured ? "" : " ghost"}"
+                  ${p.featured ? `style="background:${s.color};color:#060911"` : ""}>
+                  ${p.price === "Custom" ? "Let's talk" : "Get started"}
+                </button>
+              </div>`,
+              )
+              .join("")}
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="sp-block reveal">
+          <div class="sp-block-label" style="color:${s.color};">Common questions</div>
+          <div class="sp-faq-list">
+            ${d.faqs
+              .map(
+                (f) => `
+              <div class="sp-faq">
+                <div class="sp-faq-header">
+                  <div class="sp-faq-q">${f.q}</div>
+                  <div class="sp-faq-toggle">${plusIcon}</div>
+                </div>
+                <div class="sp-faq-a">${f.a}</div>
+              </div>`,
+              )
+              .join("")}
+          </div>
+        </div>
+
+        <!-- BOTTOM CTA -->
+        <div class="sp-cta-banner reveal">
+          <div class="sp-cta-banner-glow" style="background:${s.color}"></div>
+          <div class="sp-cta-banner-title">Ready to start your ${d.tag.toLowerCase()} project?</div>
+          <div class="sp-cta-banner-desc">Tell us about your project and we'll get back within 24 hours with a plan and a quote.</div>
+          <div class="sp-cta-banner-btns">
+            <button class="sp-btn-primary" style="background:${s.color};color:#060911">Start a project ${arrowRight}</button>
+            <button class="sp-btn-ghost">Schedule a call</button>
+          </div>
+        </div>
+      </div>`;
+
+    /* FAQ accordion */
+    sec.querySelectorAll(".sp-faq").forEach((faq) => {
+      faq.addEventListener("click", () => {
+        const isOpen = faq.classList.contains("open");
+        sec
+          .querySelectorAll(".sp-faq")
+          .forEach((f) => f.classList.remove("open"));
+        if (!isOpen) faq.classList.add("open");
+      });
+    });
+
+    sections.appendChild(sec);
+  });
+
+  observeReveals();
+}
+
+async function loadData() {
+  const files = [
+    "config",
+    "content",
+    "services",
+    "portfolio",
+    "testimonials",
+    "team",
+    "faqs",
+  ];
+
+  await Promise.all(
+    files.map(async (name) => {
+      try {
+        const r = await fetch(`data/${name}.json`);
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        DATA[name] = await r.json();
+      } catch (e) {
+        console.warn(`Failed to load ${name}.json`, e);
+        DATA[name] = [
+          "services",
+          "portfolio",
+          "testimonials",
+          "team",
+          "faqs",
+        ].includes(name)
+          ? []
+          : {};
+      }
+    }),
+  );
 }
 
 /* ─────────────────────────────────────────────────────────
@@ -500,10 +850,24 @@ function renderWhyUs() {
         <h2 class="section-title">${w.headline} <span class="highlight">${w.headlineHighlight}</span></h2>
         <p class="section-desc mx-auto mt-3">Trusted by 300+ businesses across 15+ industries worldwide.</p>
       </div>
-      
+      <div class="why-slab-grid">
+        ${w.reasons
+          .map(
+            (r, i) => `
+          <div class="why-slab-wrap reveal" style="transition-delay:${i * 0.08}s">
+            <div class="why-slab">
+              <span class="why-slab-num">0${i + 1}</span>
+              <div class="why-slab-icon">${r.icon}</div>
+              <h3 class="why-slab-title">${r.title}</h3>
+              <p class="why-slab-desc">${r.desc}</p>
+              <div class="why-depth-bar"></div>
+            </div>
+          </div>`,
+          )
+          .join("")}
+      </div>
     </div>`;
 }
-
 /* ─────────────────────────────────────────────────────────
    AI SOLUTIONS
 ───────────────────────────────────────────────────────── */
@@ -1184,6 +1548,7 @@ async function init() {
   renderAbout();
   renderPortfolio();
   renderServices();
+  renderServicesDetail();
   renderWhyUs();
   renderAI();
   renderSEO();
