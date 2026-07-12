@@ -34,11 +34,11 @@
     "gradientGold": "linear-gradient(135deg, #ffd700 0%, #ff8c00 100%)"
   },
   "social": [
-    { "name": "LinkedIn",  "icon": "linkedin",  "url": "https://linkedin.com" },
-    { "name": "Twitter",   "icon": "twitter",   "url": "https://twitter.com" },
-    { "name": "Instagram", "icon": "instagram", "url": "https://instagram.com" },
-    { "name": "Facebook",  "icon": "facebook",  "url": "https://facebook.com" },
-    { "name": "YouTube",   "icon": "youtube",   "url": "https://youtube.com" }
+    { "name": "LinkedIn",  "icon": "<i class='fa-brands fa-linkedin'></i>",  "url": "https://linkedin.com" },
+    { "name": "Twitter",   "icon": "<i class='fa-brands fa-twitter'></i>",   "url": "https://twitter.com" },
+    { "name": "Instagram", "icon": "<i class='fa-brands fa-instagram'></i>", "url": "https://instagram.com" },
+    { "name": "Facebook",  "icon": "<i class='fa-brands fa-facebook'></i>",  "url": "https://facebook.com" },
+    { "name": "YouTube",   "icon": "<i class='fa-brands fa-youtube'></i>",   "url": "https://youtube.com" }
   ],
   "nav": [
     { "label": "Home",      "href": "index.html" },

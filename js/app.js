@@ -103,7 +103,7 @@ function renderNavbar() {
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         ${nav.map((n) => `<a href="${n.href}" class="nav-link">${n.label}</a>`).join("")}
-        <a href="#contact" class="nav-link nav-cta">Get Started</a>
+        <a href="contact.html" class="nav-link nav-cta">Contact Us</a>
       </nav>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -353,7 +353,7 @@ function renderPortfolio() {
         !isPortfolioPage
           ? `
         <div class="text-center mb-5 reveal">
-          <div class="section-badge">Our Work</div>
+          <div class="section-badge">Our Portfolio</div>
           <h2 class="section-title">Transformative <span class="highlight">Projects</span></h2>
           <p class="section-desc mx-auto mt-3">A showcase of our most impactful work across industries and disciplines.</p>
         </div>`
@@ -504,77 +504,71 @@ function icon(name) {
 /* ══════════════════════════════════════════════════════════════
    HOME PAGE
    ══════════════════════════════════════════════════════════════ */
-
-function renderServices() {
+function renderServices(limit = 3) {
   const services = DATA.services;
   const el = document.getElementById("services-inner");
   if (!el || !services || !services.length) return;
+  let expanded = false;
 
-  el.innerHTML = `
-    <div class="container">
-      <div class="text-center mb-5 reveal">
-        <div class="section-badge">What We Do</div>
-        <h2 class="section-title">Full-Spectrum Digital <span class="highlight">Solutions</span></h2>
-        <p class="section-desc mx-auto mt-3">Everything your business needs to dominate the digital landscape.</p>
-      </div>
-      <div class="sh-panels" id="sh-panels">
-        ${services
-          .map(
-            (s, i) => `
-          <div class="sh-panel${i === 0 ? " active" : ""}" data-index="${i}" style="--ac:${s.color}">
-            <div class="sh-glow" style="background:${s.color}"></div>
-            <div class="sh-accent-bar" style="background:${s.color}"></div>
-            <div class="sh-collapsed-num">0${i + 1}</div>
-            <div class="sh-collapsed-label">${s.title}</div>
-            ${s.badge ? `<span class="sh-badge" style="background:${s.color}20;color:${s.color};border:1px solid ${s.color}35">${s.badge}</span>` : ""}
-            <div class="sh-content">
-              <div class="sh-top">
-                <div class="sh-num">0${i + 1}</div>
-                <div class="sh-icon" style="background:${s.color}15;border:1px solid ${s.color}25;color:${s.color}">${icon(s.icon)}</div>
-                <div class="sh-cat" style="color:${s.color}">${s.category}</div>
+  function paint() {
+    const shown = expanded ? services : services.slice(0, limit);
+    const hasMore = services.length > limit;
+
+    el.innerHTML = `
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="section-badge">Services</div>
+          <h2 class="section-title">Full-Spectrum Digital <span class="highlight">Solutions</span></h2>
+          <p class="section-desc mx-auto mt-3">Everything your business needs to dominate the digital landscape.</p>
+        </div>
+          ${shown
+            .map(
+              (s, i) => `
+            <article class="sh-row" style="--ac:${s.color}">
+              <span class="sh-corner sh-corner-tl"></span>
+              <span class="sh-corner sh-corner-br"></span>
+              <div class="sh-num">${String(i + 1).padStart(2, "0")}</div>
+              <div class="sh-icon">${icon(s.icon)}</div>
+              <div class="sh-main">
+                <div class="sh-cat">${s.category}</div>
                 <h3 class="sh-title">${s.title}</h3>
                 <p class="sh-desc">${s.description}</p>
+                <div class="sh-tags">${s.features.map((f) => `<span>${f}</span>`).join("")}</div>
               </div>
-              <div class="sh-bottom">
-                <div class="sh-tags">${s.features.map((f) => `<span class="sh-tag">${f}</span>`).join("")}</div>
-                <div class="sh-footer">
-                  <div class="sh-stat">
-                    <div class="sh-stat-val" style="color:${s.color}">${s.stat || "—"}</div>
-                    <div class="sh-stat-label">${s.stat_label || "Projects"}</div>
-                  </div>
-                  <button class="sh-cta" style="color:${s.color}">Explore →</button>
+              <div class="sh-side">
+                ${s.badge ? `<span class="sh-badge">${s.badge}</span>` : ""}
+                <div class="sh-stat">
+                  <span class="sh-stat-val">${s.stat || "—"}</span>
+                  <span class="sh-stat-label">${s.stat_label || "PROJECTS"}</span>
                 </div>
+                 <a href="services.html?tab=${s.id}" class="sh-cta">VIEW <span class="sh-arrow">→</span></a>
               </div>
-            </div>
-          </div>`,
-          )
-          .join("")}
-      </div>
-      <div class="sh-dots">
-        ${services
-          .map(
-            (s, i) => `
-          <div class="sh-dot${i === 0 ? " active" : ""}" data-index="${i}"
-               style="${i === 0 ? `background:${s.color}` : ""}"></div>`,
-          )
-          .join("")}
-      </div>
-    </div>`;
+            </article>`,
+            )
+            .join("")}
+        </div>
+        ${
+          hasMore
+            ? `<div class="sh-more-wrap">
+              <a href="services.html" class="sh-more-btn">
+                <span>View All Services</span>
+                <span class="sh-more-count">(${services.length - limit} more)</span>
+              </a>
+            </div>`
+            : ""
+        }
+      </div>`;
 
-  const panelEls = el.querySelectorAll(".sh-panel");
-  const dotEls = el.querySelectorAll(".sh-dot");
-
-  function setActive(idx) {
-    panelEls.forEach((p, i) => p.classList.toggle("active", i === idx));
-    dotEls.forEach((d, i) => {
-      d.classList.toggle("active", i === idx);
-      d.style.background =
-        i === idx ? services[i].color : "rgba(255,255,255,0.15)";
-    });
+    const moreBtn = document.getElementById("sh-more-btn");
+    if (moreBtn) {
+      moreBtn.addEventListener("click", () => {
+        expanded = !expanded;
+        paint();
+      });
+    }
   }
 
-  panelEls.forEach((p, i) => p.addEventListener("click", () => setActive(i)));
-  dotEls.forEach((d, i) => d.addEventListener("click", () => setActive(i)));
+  paint();
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -700,14 +694,6 @@ function renderServicesDetail() {
               .map(
                 (st, si) => `
               <div class="sp-step">
-                ${
-                  si < d.steps.length - 1
-                    ? `
-                  <div class="sp-step-connector">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                  </div>`
-                    : ""
-                }
                 <div class="sp-step-ghost">0${si + 1}</div>
                 <div class="sp-step-icon-wrap" style="background:${s.color}12;border:1px solid ${s.color}20;color:${s.color}">
                   ${icon(st.icon)}
@@ -798,6 +784,11 @@ function renderServicesDetail() {
 
     sections.appendChild(sec);
   });
+
+  const requestedTab = new URLSearchParams(window.location.search).get("tab");
+  if (requestedTab && tabNav.querySelector(`[data-id="${requestedTab}"]`)) {
+    setActiveTab(requestedTab);
+  }
 
   observeReveals();
 }
@@ -1181,16 +1172,27 @@ function renderFAQ() {
 function renderContact() {
   const c = DATA.content.contact;
   const cfg = DATA.config;
+  const heroCS = document.getElementById("hero-inner-cs");
   const el = document.getElementById("contact-inner");
   if (!el || !c) return;
 
+  if (heroCS) {
+    heroCS.innerHTML = `
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-12 hero-content reveal">
+            <div class="orbit-ring ring-1"><div class="orbit-dot"></div></div>
+            <div class="orbit-ring ring-2"><div class="orbit-dot"></div></div>
+            <div class="orbit-ring ring-3"><div class="orbit-dot"></div></div>
+            <h1 class="pp-title">${c.headline}<br><span class="line2">${c.headlineHighlight}</span></h1>
+            <p class="hero-subtitle">${c.description}</p>
+          </div>
+        </div>
+      </div>`;
+  }
+
   el.innerHTML = `
     <div class="container">
-      <div class="text-center mb-5 reveal">
-        <div class="section-badge">${c.badge}</div>
-        <h2 class="section-title">${c.headline} <span class="highlight">${c.headlineHighlight}</span></h2>
-        <p class="section-desc mx-auto mt-3">${c.description}</p>
-      </div>
       <div class="contact-grid">
         <div class="contact-info-card reveal-left">
           <h3 class="contact-info-heading">Contact Information</h3>
@@ -1198,7 +1200,7 @@ function renderContact() {
             .map(
               (i) => `
             <div class="contact-info-item">
-              <div class="contact-icon-wrap">${ic(i.icon)}</div>
+              <div class="contact-icon-wrap">${i.icon}</div>
               <div>
                 <div class="contact-info-label">${i.label}</div>
                 <div class="contact-info-value">${i.value}</div>
@@ -1212,14 +1214,11 @@ function renderContact() {
               ${cfg.social
                 .map(
                   (s) => `
-                <a href="${s.url}" class="social-icon-link" title="${s.name}" target="_blank" rel="noopener">${ic(s.icon, 16)}</a>`,
+                <a href="${s.url}" class="social-icon-link" title="${s.name}" target="_blank" rel="noopener">${s.icon}</a>`,
                 )
                 .join("")}
             </div>
           </div>
-          <a href="admin.html" class="admin-link-btn" title="View Submissions">
-            ${ic("layers", 14)} Admin Panel
-          </a>
         </div>
         <div class="contact-form-card reveal-right">
           <h3 class="contact-form-title">Send Us a Message</h3>
@@ -1227,21 +1226,21 @@ function renderContact() {
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="cf-name">Full Name <span style="color:#ef4444">*</span></label>
-                <input type="text" class="form-control" id="cf-name" placeholder="Your full name" required>
+                <input type="text" class="form-control" id="cf-name" placeholder="Your full name" style="color: var(--muted)" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="cf-email">Email Address <span style="color:#ef4444">*</span></label>
-                <input type="email" class="form-control" id="cf-email" placeholder="your@email.com" required>
+                <input type="email" class="form-control" id="cf-email" placeholder="your@email.com" style="color: var(--muted)" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="cf-phone">Phone Number</label>
-                <input type="tel" class="form-control" id="cf-phone" placeholder="+92 300 0000000">
+                <input type="tel" class="form-control" id="cf-phone" placeholder="+92 300 0000000" style="color: var(--muted)">
               </div>
               <div class="form-group">
                 <label class="form-label" for="cf-service">Service Interested In</label>
-                <select class="form-control" id="cf-service">
+                <select class="form-control"  id="cf-service" style="color: var(--muted)">
                   <option value="">Select a service...</option>
                   ${c.services.map((s) => `<option value="${s}">${s}</option>`).join("")}
                 </select>
@@ -1249,10 +1248,10 @@ function renderContact() {
             </div>
             <div class="form-group">
               <label class="form-label" for="cf-message">Your Message <span style="color:#ef4444">*</span></label>
-              <textarea class="form-control" id="cf-message" placeholder="Tell us about your project goals, budget, and timeline..." required></textarea>
+              <textarea class="form-control" id="cf-message" placeholder="Tell us about your project goals, budget, and timeline..." style="color: var(--muted)" required></textarea>
             </div>
             <button type="submit" class="btn-submit" id="submit-btn">
-              <span id="submit-text">${ic("send", 16)} Send Message</span>
+              <span id="submit-text">Send Message</span>
               <span id="submit-loading" style="display:none">Sending...</span>
             </button>
             <div class="form-success" id="form-success">
@@ -1262,6 +1261,12 @@ function renderContact() {
           </form>
         </div>
       </div>
+      <div class="map reveal-right mt-5">
+        <h3 class="contact-form-title">Our Location</h3>
+        <div class="map-container">
+          <iframe src="${c.mapEmbed}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>          
     </div>`;
 
   document

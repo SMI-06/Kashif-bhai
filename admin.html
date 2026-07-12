@@ -8,10 +8,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <div class="bg-grid" aria-hidden="true"></div>
@@ -22,11 +23,11 @@
     <nav class="admin-nav">
       <div class="admin-nav-logo">KA Admin</div>
       <div class="admin-nav-links">
-        <a href="index.html" class="admin-nav-link">← Back to Website</a>
         <button class="export-btn" id="export-btn" onclick="exportCSV()">
           Export CSV
         </button>
         <button class="btn-danger-soft" onclick="clearAll()">Clear All</button>
+        <a href="index.html" class="admin-nav-link"> Back to Website <i class="fa-solid fa-right-from-bracket"></i> </a>
       </div>
     </nav>
 
@@ -55,7 +56,7 @@
           class="search-input"
           id="service-filter"
           onchange="filterByService(this.value)"
-          style="width: auto"
+          style="width: auto; background:var(--bg-darkNavy)"
         >
           <option value="">All Services</option>
         </select>
@@ -168,8 +169,8 @@
             (row, i) => `
         <tr onclick="toggleDetail('detail-${row.id}')" style="cursor:pointer">
           <td style="color:var(--muted);font-size:0.8rem">${i + 1}</td>
-          <td><strong style="color:var(--text)">${escHtml(row.name)}</strong></td>
-          <td><a href="mailto:${escHtml(row.email)}" style="color:var(--primary)" onclick="event.stopPropagation()">${escHtml(row.email)}</a></td>
+          <td><strong style="color:var(--muted)">${escHtml(row.name)}</strong></td>
+          <td><a href="mailto:${escHtml(row.email)}" style="color:var(--muted)" onclick="event.stopPropagation()">${escHtml(row.email)}</a></td>
           <td>${row.phone ? escHtml(row.phone) : '<span style="opacity:.4">—</span>'}</td>
           <td>${row.service ? `<span class="badge-service">${escHtml(row.service)}</span>` : '<span style="opacity:.4">—</span>'}</td>
           <td><div class="message-cell">${escHtml(row.message)}</div></td>
@@ -180,9 +181,9 @@
             </button>
           </td>
         </tr>
-        <tr class="row-detail" id="detail-${row.id}">
+        <tr class="row-detail" style="background:var(--bg-darkNavy)" id="detail-${row.id}">
           <td colspan="8">
-            <strong style="font-family:'Syne',sans-serif;font-size:0.82rem;color:var(--primary)">FULL MESSAGE</strong>
+            <strong style="font-family:'Syne',sans-serif;font-size:0.82rem;color:var(--gold)">FULL MESSAGE</strong>
             <div class="detail-message">${escHtml(row.message)}</div>
           </td>
         </tr>`,
@@ -298,54 +299,7 @@
         populateServiceFilter(allData);
         renderTable(allData);
       }
-
       load();
-
-      // Add demo data if empty (for testing)
-      document.addEventListener("DOMContentLoaded", () => {
-        if (!getSubmissions().length) {
-          const demo = [
-            {
-              id: 1001,
-              name: "Ahmed Khan",
-              email: "ahmed@example.com",
-              phone: "+92 300 1111111",
-              service: "SEO & Google Ranking",
-              message:
-                "We need to improve our search rankings for our e-commerce website. Currently on page 3 for main keywords.",
-              date: "May 18, 2024",
-              time: "10:30 AM",
-              datetime: new Date().toISOString(),
-            },
-            {
-              id: 1002,
-              name: "Sara Ali",
-              email: "sara@techcorp.pk",
-              phone: "+92 333 2222222",
-              service: "Web Development",
-              message:
-                "Looking for a modern e-commerce platform with payment gateway integration for our fashion brand.",
-              date: "May 17, 2024",
-              time: "2:15 PM",
-              datetime: new Date().toISOString(),
-            },
-            {
-              id: 1003,
-              name: "James Wilson",
-              email: "james@startup.io",
-              phone: "",
-              service: "AI Automation",
-              message:
-                "Interested in automating our customer support with AI chatbots. We handle around 1000 queries per day.",
-              date: "May 16, 2024",
-              time: "9:00 AM",
-              datetime: new Date().toISOString(),
-            },
-          ];
-          saveSubmissions(demo);
-          load();
-        }
-      });
     </script>
   </body>
 </html>
