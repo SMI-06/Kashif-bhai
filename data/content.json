@@ -34,33 +34,118 @@
     ]
   },
   "about": {
-    "badge": "About Us",
-    "headline": "Kashif Agency",
-    "headlineHighlight": "Premium Digital Marketing",
+    "pageHeader": {
+      "eyebrow": "About Us",
+      "title": "Engineering Growth Since",
+      "titleHighlight": "2004",
+      "subtitle": "20+ years of digital marketing, AI automation, and web engineering — trusted by 300+ businesses worldwide."
+    },
+    "badge": "Who We Are",
+    "headline": "Pakistan's Premier Digital",
+    "headlineHighlight": "Marketing & AI Agency",
     "description1": "Founded in 2004, Kashif Agency has been at the forefront of digital transformation. We combine traditional marketing wisdom with cutting-edge AI technology to deliver results that matter.",
     "description2": "Our multidisciplinary team of strategists, designers, developers, and AI specialists works cohesively to create campaigns and solutions that drive measurable growth for your business.",
     "features": [
       {
-        "icon": "<i class=\"fas fa-award\"></i>",
-        "title": "Awards",
-        "desc": "Awards Details"
+        "icon": "<i class='far fa-microchip'></i>",
+        "title": "AI-First Approach",
+        "desc": "Leveraging latest AI tools and automation to supercharge your marketing ROI."
       },
       {
-        "icon": "<i class=\"fas fa-award\"></i>",
-        "title": "Awards",
-        "desc": "Awards Details"
+        "icon": "<i class='fas fa-award'></i>",
+        "title": "Award-Winning Work",
+        "desc": "Recognized globally for creative excellence and measurable business impact."
       },
       {
-        "icon": "<i class=\"fas fa-award\"></i>",
-        "title": "Awards",
-        "desc": "Awards Details"
+        "icon": "<i class='fas fa-users'></i>",
+        "title": "Dedicated Team",
+        "desc": "80+ specialists across marketing, tech, design, and AI strategy domains."
+      },
+      {
+        "icon": "<i class='far fa-clipboard'></i>",
+        "title": "Proven ROI",
+        "desc": "Average 340% ROI delivered to clients across all major industry verticals."
+      }
+    ],
+    "reason-for-about-page": [
+      {
+        "icon": "zap",
+        "title": "Full-Service Agency",
+        "desc": "From SEO to AI automation — one agency handles everything, ensuring perfect brand consistency."
+      },
+      {
+        "icon": "<i class=\"far fa-clipboard\"></i>",
+        "title": "Proven Track Record",
+        "desc": "500+ successful projects and 20+ years of consistently delivering above-expectation results."
+      },
+      {
+        "icon": "<i class=\"fas fa-star\"></i>",
+        "title": "Premium Quality",
+        "desc": "We never compromise on quality — every deliverable meets the highest international standards."
       },
       {
         "icon": "<i class=\"fas fa-headset\"></i>",
-        "title": "Awards",
-        "desc": "Awards Details"
+        "title": "24/7 Support",
+        "desc": "Dedicated account managers and round-the-clock support to keep your business running smoothly."
       }
-    ]
+    ],
+    "mission": "To engineer measurable growth for every client we work with — by fusing strategic marketing thinking with AI-driven execution, delivered with the precision of an engineering team, not a typical agency.",
+    "vision": "To become the definitive AI-powered marketing partner for businesses across Pakistan and beyond — proving that world-class digital work can originate anywhere.",
+    "story": [
+      {
+        "year": "2004",
+        "title": "Founded in Karachi",
+        "desc": "Started as a small creative studio serving local businesses."
+      },
+      {
+        "year": "2012",
+        "title": "Digital Transformation",
+        "desc": "Shifted fully into performance marketing and web development."
+      },
+      {
+        "year": "2019",
+        "title": "Regional Expansion",
+        "desc": "Opened service to international clients across MENA and Europe."
+      },
+      {
+        "year": "2023",
+        "title": "AI Integration",
+        "desc": "Built an in-house AI systems team; launched automation-first campaigns."
+      },
+      {
+        "year": "2026",
+        "title": "80+ Specialists",
+        "desc": "Grew into a full-stack marketing, tech, and AI agency."
+      }
+    ],
+    "values": [
+      {
+        "icon": "<i class='fas fa-certificate'></i>",
+        "title": "Value 1",
+        "desc": "This is our value 1 description."
+      },
+      {
+        "icon": "<i class='fas fa-certificate'></i>",
+        "title": "Value 2",
+        "desc": "This is our value 2 description."
+      },
+      {
+        "icon": "<i class='fas fa-certificate'></i>",
+        "title": "Value 3",
+        "desc": "This is our value 3 description."
+      },
+      {
+        "icon": "<i class='fas fa-certificate'></i>",
+        "title": "Value 4",
+        "desc": "This is our value 4 description."
+      }
+    ],
+    "whatsapp": {
+      "number": "923347159777",
+      "icon": "<i class=\"far fa-comment\"></i>",
+      "greeting": "Hi 👋 Have a question about Kashif Agency? Chat with us on WhatsApp.",
+      "message": "Hi Kashif Agency! I just checked out your About page and I'd like to know more about your services."
+    }
   },
   "whyUs": {
     "badge": "Why Choose Us",

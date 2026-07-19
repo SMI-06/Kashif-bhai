@@ -324,7 +324,7 @@ function renderAboutPage() {
             <div class="orbit-ring ring-1"><div class="orbit-dot"></div></div>
             <div class="orbit-ring ring-2"><div class="orbit-dot"></div></div>
             <div class="orbit-ring ring-3"><div class="orbit-dot"></div></div>
-            <h1 class="pp-title">${ph.eyebrow}<br><span class="line2">${ph.titleHighlight}</span></h1>
+            <h1 class="pp-title">${ph.title}<br><span class="line2">${ph.titleHighlight}</span></h1>
             <p class="hero-subtitle">${ph.subtitle}</p>
           </div>
         </div>
@@ -340,130 +340,119 @@ function renderAboutPage() {
     : null;
 
   aboutSSs.innerHTML = `
-    <section class="ap-section-intro">
-      <div class="container">
-        <div class="ap-hero reveal-up">
-          <h2 class="section-title">${as.headline} <span class="highlight-gold">${as.headlineHighlight}</span></h2>  
-          <p class="ap-lead">${as.description1}</p>
-          <p class="section-desc">${as.description2}</p>
-        </div>
-      </div>
-    </section>
+    <div class="container">
 
-    <!-- ===== MISSION & VISION ===== -->
-    <section class="ap-section-mv">
-      <div class="container">
-        <div class="ap-section-head reveal-up">
-          <h2 class="section-title">Mission <span class="highlight-gold"> & Vision</span></h2>
-        </div>
-        <div class="ap-mv-grid reveal-up">
-          <div class="ap-mv-card">
-            <div class="ap-mv-icon"><i class="far fa-dot-circle"></i></div>
-            <h3>Our Mission</h3>
-            <p>${as.mission}</p>
-          </div>
-          <div class="ap-mv-card">
-            <div class="ap-mv-icon"><i class="far fa-eye"></i></div>
-            <h3>Our Vision</h3>
-            <p>${as.vision}</p>
-          </div>
-        </div>
+      <div class="ap-hero reveal-up">
+        <div class="section-badge">${as.badge}</div>
+        <h2 class="ap-title">${as.headline} <span class="highlight-gold">${as.headlineHighlight}</span></h2>
+        <p class="ap-lead">${as.description1}</p>
+        <p class="section-desc">${as.description2}</p>
       </div>
-    </section>
-    
-    
-    <!-- ===== JOURNEY / STORY ===== -->
-    <section class="ap-section-story">
-      <div class="container">
-        <div class="ap-section-head reveal-up">
-          <h2 class="section-title">Our <span class="highlight-gold">Journey</span></h2>
-        </div>
-        <div class="ap-timeline reveal-up">
-          ${as.story
-            .map(
-              (s) => `
-            <div class="ap-tl-item">
-              <div class="ap-tl-year">${s.year}</div>
-              <div class="ap-tl-dot"></div>
-              <div class="ap-tl-body">
-                <h4>${s.title}</h4>
-                <p>${s.desc}</p>
-              </div>
-            </div>`,
-            )
-            .join("")}
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== CORE VALUES ===== -->
-    <section class="ap-section-values">
-      <div class="container">
-        <div class="ap-section-head reveal-up">
-          <h2 class="section-title">Core <span class="highlight-gold">Values</span></h2>
+      <div class="ap-mv-grid reveal-up">
+        <div class="ap-mv-card">
+          <div class="ap-mv-icon">${ic("target", 20)}</div>
+          <h3>Our Mission</h3>
+          <p>${as.mission}</p>
         </div>
-        <div class="ap-values-grid reveal-up">
-          ${as.values
-            .map(
-              (v) => `
-            <div class="ap-value-card">
-              <div class="ap-value-icon">${v.icon}</div>
-              <h4>${v.title}</h4>
-              <p>${v.desc}</p>
-            </div>`,
-            )
-            .join("")}
+        <div class="ap-mv-card">
+          <div class="ap-mv-icon">${ic("eye", 20)}</div>
+          <h3>Our Vision</h3>
+          <p>${as.vision}</p>
         </div>
       </div>
-    </section>
 
-    <!-- ===== WHY CHOOSE US ===== -->
-    <section class="ap-section-features">
-      <div class="container">
-        <div class="ap-section-head reveal-up">
-          <h2 class="section-title">Why <span class="highlight-gold">Choose Us</span></h2>
-        </div>
-        <div class="about-features reveal-up">
-          ${as["reason-for-about-page"]
-            .map(
-              (f, i) => `
-            <div class="why-slab-wrap reveal" style="transition-delay:${i * 0.08}s">
-            <div class="why-slab">
-              <span class="why-slab-num">0${i + 1}</span>
-              <div class="why-slab-icon">${f.icon}</div>
-              <h3 class="why-slab-title">${f.title}</h3>
-              <p class="why-slab-desc">${f.desc}</p>
-              <div class="why-depth-bar"></div>
+      <div class="ap-section-head reveal-up">
+        <h2 class="section-title">Our <span class="highlight-gold">Journey</span></h2>
+      </div>
+      <div class="ap-timeline reveal-up">
+        ${as.story
+          .map(
+            (s) => `
+          <div class="ap-tl-item">
+            <div class="ap-tl-year">${s.year}</div>
+            <div class="ap-tl-dot"></div>
+            <div class="ap-tl-body">
+              <h4>${s.title}</h4>
+              <p>${s.desc}</p>
             </div>
           </div>`,
-            )
-            .join("")}
+          )
+          .join("")}
+      </div>
+
+      <div class="ap-section-head reveal-up">
+        <h2 class="section-title">Core <span class="highlight-gold">Values</span></h2>
+      </div>
+      <div class="ap-values-grid reveal-up">
+        ${as.values
+          .map(
+            (v) => `
+          <div class="ap-value-card">
+            <div class="ap-value-icon">${ic(v.icon, 22)}</div>
+            <h4>${v.title}</h4>
+            <p>${v.desc}</p>
+          </div>`,
+          )
+          .join("")}
+      </div>
+
+      <div class="ap-section-head reveal-up">
+        <h2 class="section-title">Why <span class="highlight-gold">Choose Us</span></h2>
+      </div>
+      <div class="about-features reveal-up">
+        ${as.features
+          .map(
+            (f) => `
+          <div class="about-feature">
+            <div class="about-feature-icon">${ic(f.icon)}</div>
+            <div>
+              <h4>${f.title}</h4>
+              <p>${f.desc}</p>
+            </div>
+          </div>`,
+          )
+          .join("")}
+      </div>
+
+      <div class="ap-extra-info reveal-up">
+        <div class="about-extra-item">
+          <div style="color:var(--primary);margin-bottom:.3rem">${ic("map-pin", 16)}</div>
+          <span>Based in Pakistan, Serving Globally</span>
+        </div>
+        <div class="about-extra-item">
+          <div style="color:var(--secondary);margin-bottom:.3rem">${ic("award", 16)}</div>
+          <span>Award-winning agency since 2004</span>
         </div>
       </div>
-    </section>
-    
-    <!-- ===== EXTRA INFO + CTA ===== -->
-      <section class="ap-section-cta">
-        <div class="cta-panel reveal-up">
-          <span class="cta-corner cta-corner--tl"></span>
-          <span class="cta-corner cta-corner--tr"></span>
-          <span class="cta-corner cta-corner--bl"></span>
-          <span class="cta-corner cta-corner--br"></span>
 
-          <div class="cta-meta">
-            <span class="cta-status"><i></i>OPEN FOR PROJECTS</span>
-          </div>
+      <div class="mt-4 text-center reveal-up">
+        <a href="index.html#contact" class="btn-primary">${ic("arrow-right", 16)} Start a Project</a>
+      </div>
+    </div>
 
-          <h3 class="cta-heading">Have a build in mind?<br>Let's spec it out.</h3>
+    ${
+      waLink
+        ? `
+    <div class="ap-wa-widget" id="ap-wa-widget">
+      <div class="ap-wa-tooltip" id="ap-wa-tooltip">${wa.greeting}</div>
+      <a href="${waLink}" target="_blank" rel="noopener" class="ap-wa-btn" aria-label="Chat on WhatsApp">
+        <span class="ap-wa-icon">${wa.icon}</span>
+        <span class="ap-wa-pulse"></span>
+      </a>
+    </div>`
+        : ""
+    }
+  `;
 
-          <a href="contact.html" class="btn about-cta">
-            <span>Start a Project</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" class="cta-arrow">
-              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-      </section>`;
+  if (waLink) {
+    const tip = document.getElementById("ap-wa-tooltip");
+    const btn = document.querySelector("#ap-wa-widget .ap-wa-btn");
+    setTimeout(() => tip && tip.classList.add("show"), 2000);
+    setTimeout(() => tip && tip.classList.remove("show"), 8000);
+    btn &&
+      btn.addEventListener("click", () => tip && tip.classList.remove("show"));
+  }
 
   function initReveal() {
     const items = document.querySelectorAll(
@@ -1222,69 +1211,33 @@ function renderTestimonials() {
 /* ─────────────────────────────────────────────────────────
    TEAM
 ───────────────────────────────────────────────────────── */
-
-function renderTeamHeader() {
-  const el = document.getElementById("team-inner-pp");
-  if (!el) return;
-  el.innerHTML = `
-    <div class="container">
-    <div class="row align-items-center mt-5 g-5">
-      <div class="col-lg-12 hero-content reveal">
-        <div class="orbit-ring ring-1">
-          <div class="orbit-dot"></div>
-        </div>
-        <div class="orbit-ring ring-2">
-          <div class="orbit-dot"></div>
-        </div>
-        <div class="orbit-ring ring-3">
-          <div class="orbit-dot"></div>
-        </div>
-        <h2 class="section-title">
-          The Brilliant Minds <span class="highlight">Behind Our Success</span>
-        </h2>
-        <p class="section-desc mx-auto mt-3">
-          A world-class team of strategists, creatives, developers and AI
-          specialists.
-        </p>
-      </div>
-    </div>
-  </div>
-  `;
-}
-
-/* ============ RENDER: Team grid (ID badge style) ============ */
 function renderTeam() {
   const team = DATA.team;
-  const el = document.getElementById("team-page-inner");
+  const el = document.getElementById("team-inner");
   if (!el || !team.length) return;
-
-  const glowColor = (gradient) => {
-    const match = gradient.match(/#[0-9a-fA-F]{3,6}/);
-    return match ? match[0] : "#E5B80B";
-  };
 
   el.innerHTML = `
     <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-badge">Our People</div>
+        <h2 class="section-title">The Brilliant Minds <span class="highlight">Behind Our Success</span></h2>
+        <p class="section-desc mx-auto mt-3">A world-class team of strategists, creatives, developers and AI specialists.</p>
+      </div>
       <div class="team-grid">
         ${team
           .map(
             (m, i) => `
-          <div class="team-card reveal" style="transition-delay:${i * 0.1}s; --tm-glow:${glowColor(m.gradient)}">
-             <div class="team-photo-panel">
-              ${
-                m.photo
-                  ? `<img src="${m.photo}" alt="${m.name}" loading="lazy" onerror="this.remove()">`
-                  : `<div class="tm-dots"></div><div class="team-avatar">${m.initials}</div>`
-              }
+          <div class="team-card reveal" style="transition-delay:${i * 0.1}s">
+            <div class="team-avatar-wrap">
+              <div class="team-avatar" style="background:${m.gradient}">${m.initials}</div>
+              <div class="team-avatar-ring"></div>
             </div>
-            <div class="team-details">
-              <h3 class="team-name">${m.name}</h3>
-              <div class="team-role">${m.role}</div>
-              <p class="team-bio">${m.bio}</p>
-              <div class="team-social">
-                <a href="${m.social.linkedin}" class="team-social-link" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                <a href="${m.social.twitter}"  class="team-social-link" title="Twitter"  target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-              </div>
+            <h3 class="team-name">${m.name}</h3>
+            <div class="team-role">${m.role}</div>
+            <p class="team-bio">${m.bio}</p>
+            <div class="team-social">
+              <a href="${m.social.linkedin}" class="team-social-link" title="LinkedIn" target="_blank" rel="noopener">${ic("linkedin", 14)}</a>
+              <a href="${m.social.twitter}"  class="team-social-link" title="Twitter"  target="_blank" rel="noopener">${ic("twitter", 14)}</a>
             </div>
           </div>`,
           )
@@ -1292,13 +1245,6 @@ function renderTeam() {
       </div>
     </div>`;
 }
-
-/* ============ Init — add both calls where your other render*() calls run ============ */
-document.addEventListener("DOMContentLoaded", () => {
-  renderTeamHeader();
-  renderTeam();
-  // your existing initReveal() / initCursor() / initLoader() calls stay as-is
-});
 
 /* ─────────────────────────────────────────────────────────
    CTA BANNER

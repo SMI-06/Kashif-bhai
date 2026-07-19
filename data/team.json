@@ -1,10 +1,11 @@
 [
   {
     "id": 1,
-    "name": "Kashif Rahman",
+    "name": "Kashif Ul Hasnain",
     "role": "Founder & CEO",
     "bio": "20+ years shaping digital brands. Visionary leader with expertise in digital strategy and AI-driven marketing transformation.",
     "initials": "KR",
+    "photo": "https://tse3.mm.bing.net/th/id/OIP.lnJehs7tEQY98-p9AgvLLwHaJO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     "gradient": "linear-gradient(135deg, #00d4ff, #7c3aed)",
     "social": {
       "linkedin": "#",
@@ -13,10 +14,11 @@
   },
   {
     "id": 2,
-    "name": "Ayesha Siddiqui",
+    "name": "Kashif Ul Hasnain",
     "role": "Chief Marketing Officer",
     "bio": "Performance marketing maestro with 15+ years scaling brands across MENA and South Asia markets through data-driven campaigns.",
     "initials": "AS",
+    "photo": "https://tse3.mm.bing.net/th/id/OIP.lnJehs7tEQY98-p9AgvLLwHaJO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     "gradient": "linear-gradient(135deg, #ffd700, #ff8c00)",
     "social": {
       "linkedin": "#",
@@ -25,10 +27,11 @@
   },
   {
     "id": 3,
-    "name": "Zain Mirza",
+    "name": "Kashif Ul Hasnain",
     "role": "Head of AI & Technology",
     "bio": "AI specialist and full-stack architect building next-generation automation platforms and AI-integrated digital experiences.",
     "initials": "ZM",
+    "photo": "https://tse3.mm.bing.net/th/id/OIP.lnJehs7tEQY98-p9AgvLLwHaJO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     "gradient": "linear-gradient(135deg, #00ff88, #00d4ff)",
     "social": {
       "linkedin": "#",
@@ -37,10 +40,11 @@
   },
   {
     "id": 4,
-    "name": "Hira Khan",
+    "name": "Kashif Ul Hasnain",
     "role": "Creative Director",
     "bio": "Award-winning creative director crafting visual identities and brand experiences that resonate, inspire, and convert across every touchpoint.",
     "initials": "HK",
+    "photo": "https://tse3.mm.bing.net/th/id/OIP.lnJehs7tEQY98-p9AgvLLwHaJO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     "gradient": "linear-gradient(135deg, #ff6b6b, #7c3aed)",
     "social": {
       "linkedin": "#",
