@@ -246,19 +246,11 @@
     "description": "Join 300+ successful businesses that trust Kashif Agency for their digital growth. Get a free strategy consultation today.",
     "btn1": {
       "label": "Get Free Consultation",
-      "href": "#contact"
+      "href": "contact.html"
     },
     "btn2": {
-      "label": "View Case Studies",
-      "href": "#portfolio"
-    },
-    "btn3": {
-      "label": "Explore Porjects",
+      "label": "View Our Work",
       "href": "portfolios.html"
-    },
-    "btn4": {
-      "label": "More",
-      "href": "#"
     }
   },
   "contact": {

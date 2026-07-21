@@ -49,18 +49,18 @@
   ],
   "footer": {
     "quickLinks": [
-      { "label": "Home",   "icon": "<i class='fas fa-house'></i>", "href": "#home" },
-      { "label": "About Us",  "icon": "<i class='fas fa-book'></i>", "href": "#about" },
-      { "label": "Services",  "icon": "<i class='fas fa-list-check'></i>", "href": "#services" },
-      { "label": "Portfolio", "icon": "<i class='fas fa-briefcase'></i>", "href": "#portfolio" },
-      { "label": "Contact",   "icon": "<i class='fas fa-phone'></i>", "href": "#contact" }
+      { "label": "Home",   "icon": "<i class='fas fa-house'></i>", "href": "index.html" },
+      { "label": "About Us",  "icon": "<i class='fas fa-book'></i>", "href": "about.html" },
+      { "label": "Services",  "icon": "<i class='fas fa-list-check'></i>", "href": "services.html" },
+      { "label": "Portfolio", "icon": "<i class='fas fa-briefcase'></i>", "href": "portfolios.html" },
+      { "label": "Contact",   "icon": "<i class='fas fa-phone'></i>", "href": "contact.html" }
     ],
     "services": [
-      { "label": "SEO Optimization", "icon": "<i class='fas fa-search-dollar'></i>", "href": "#services" },
-      { "label": "Paid Advertising", "icon": "<i class='fas fa-ad'></i>", "href": "#services" },
-      { "label": "Web Development", "icon": "<i class='fas fa-code'></i>", "href": "#services" },
-      { "label": "AI Automation", "icon": "<i class='fas fa-robot'></i>", "href": "#services" },
-      { "label": "Brand Strategy", "icon": "<i class='fas fa-bullseye'></i>", "href": "#services" }
+      { "label": "SEO Optimization", "icon": "<i class='fas fa-search-dollar'></i>", "href": "services.html?tab=seo" },
+      { "label": "Paid Advertising", "icon": "<i class='fas fa-ad'></i>", "href": "services.html?tab=smm" },
+      { "label": "Web Development", "icon": "<i class='fas fa-code'></i>", "href": "services.html?tab=web" },
+      { "label": "AI Automation", "icon": "<i class='fas fa-robot'></i>", "href": "services.html?tab=${s.id}" },
+      { "label": "Brand Strategy", "icon": "<i class='fas fa-bullseye'></i>", "href": "services.html?tab=consulting" }
     ],
     "copyright": "© 2024 Kashif Agency. All Rights Reserved."
   }

@@ -838,6 +838,11 @@ section {
   background: transparent;
 }
 
+#aboutcta{
+  /* margin: 0 0 0 0; */
+  background: #00ff88;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2988,8 +2993,12 @@ textarea.form-control {
 }
 
 /* ── CTA Box (current variant used across pages) ────────── */
+#cta{
+  background: var(--bg-darkNavy);
+}
+
 .cta-box {
-  background: var(--bg-card);
+  background: var(--bg-glass);
   border: 1px solid var(--border);
   border-radius: 28px;
   padding: 5rem 3rem;
@@ -3041,22 +3050,6 @@ textarea.form-control {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 1.75rem;
-}
-
-.cta-trust {
-  display: flex;
-  gap: 1.75rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 0.82rem;
-  color: var(--muted);
-  font-family: 'Syne', sans-serif;
-}
-
-.cta-trust span {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
 }
 
 /* ── Responsive ───────────────────────────────────────────── */
@@ -3935,7 +3928,7 @@ textarea.form-control {
 }
 
 .ap-section-features {
-  margin: 0 auto 3rem;
+  /* margin: 0 auto 3rem; */
   border-top: 1px solid var(--gold);
   border-bottom: 1px solid var(--gold);
   background: var(--bg-glass);
@@ -4162,7 +4155,6 @@ textarea.form-control {
 /* About CTA */
 
 .ap-section-cta {
-  /* padding: 4rem 1.5rem; */
   display: flex;
   justify-content: center;
 }
@@ -4351,7 +4343,6 @@ textarea.form-control {
     gap: 0.5rem;
   }
 }
-
 
 /* reveal-on-scroll */
 .reveal-up {

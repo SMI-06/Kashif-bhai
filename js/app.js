@@ -313,6 +313,7 @@ function renderAboutPage() {
   const as = DATA?.content?.about || {};
   const aboutSS = document.getElementById("about-inner-pp");
   const aboutSSs = document.getElementById("about-page-inner");
+  // const aboutCTA = document.getElementById("about-cta-inner");
 
   // ---- HERO (page header) — UNCHANGED ----
   if (aboutSS && as.pageHeader) {
@@ -418,7 +419,7 @@ function renderAboutPage() {
     </section>
 
     <!-- ===== WHY CHOOSE US ===== -->
-    <section class="ap-section-features">
+    <section class="c">
       <div class="container">
         <div class="ap-section-head reveal-up">
           <h2 class="section-title">Why <span class="highlight-gold">Choose Us</span></h2>
@@ -440,30 +441,7 @@ function renderAboutPage() {
             .join("")}
         </div>
       </div>
-    </section>
-    
-    <!-- ===== EXTRA INFO + CTA ===== -->
-      <section class="ap-section-cta">
-        <div class="cta-panel reveal-up">
-          <span class="cta-corner cta-corner--tl"></span>
-          <span class="cta-corner cta-corner--tr"></span>
-          <span class="cta-corner cta-corner--bl"></span>
-          <span class="cta-corner cta-corner--br"></span>
-
-          <div class="cta-meta">
-            <span class="cta-status"><i></i>OPEN FOR PROJECTS</span>
-          </div>
-
-          <h3 class="cta-heading">Have a build in mind?<br>Let's spec it out.</h3>
-
-          <a href="contact.html" class="btn about-cta">
-            <span>Start a Project</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" class="cta-arrow">
-              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-      </section>`;
+    </section>`;
 
   function initReveal() {
     const items = document.querySelectorAll(
@@ -1016,7 +994,7 @@ function renderWhyUs() {
     <div class="container">
       <div class="text-center mb-5 reveal">
         <div class="section-badge">${w.badge}</div>
-        <h2 class="section-title">${w.headline} <span class="highlight">${w.headlineHighlight}</span></h2>
+        <h2 class="section-title">${w.headline} <br> <span class="highlight">${w.headlineHighlight}</span></h2>
         <p class="section-desc mx-auto mt-3">Trusted by 300+ businesses across 15+ industries worldwide.</p>
       </div>
       <div class="why-slab-grid">
@@ -1301,36 +1279,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ─────────────────────────────────────────────────────────
-   CTA BANNER
-───────────────────────────────────────────────────────── */
-function renderCTA() {
-  const c = DATA.content.cta;
-  const el = document.getElementById("cta-inner");
-  if (!el || !c) return;
-
-  el.innerHTML = `
-    <div class="container">
-      <div class="cta-box reveal">
-        <div class="cta-glow" aria-hidden="true"></div>
-        <div class="cta-content">
-          <span class="section-badge" style="margin:0 auto 1.25rem">Ready to Scale?</span>
-          <h2 class="cta-title">${c.headline} <span class="highlight">${c.headlineHighlight}</span></h2>
-          <p class="cta-desc">${c.description}</p>
-          <div class="cta-btns">
-            <a href="${c.btn1.href}" class="btn-primary">${ic("arrow-right", 16)} ${c.btn1.label}</a>
-            <a href="${c.btn2.href}" class="btn-outline">${c.btn2.label}</a>
-          </div>
-          <div class="cta-trust">
-            <span>${ic("shield", 14)} No contracts</span>
-            <span>${ic("clock", 14)} 24hr response</span>
-            <span>${ic("star", 14)} Free consultation</span>
-          </div>
-        </div>
-      </div>
-    </div>`;
-}
-
-/* ─────────────────────────────────────────────────────────
    FAQ
 ───────────────────────────────────────────────────────── */
 function renderFAQ() {
@@ -1385,6 +1333,32 @@ function renderFAQ() {
       }
     });
   });
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   CTA BANNER
+───────────────────────────────────────────────────────── */
+function renderCTA() {
+  const c = DATA.content.cta;
+  const el = document.getElementById("cta-inner");
+  if (!el || !c) return;
+
+  el.innerHTML = `
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="cta-content">
+          <span class="section-badge" style="margin:0 auto 1.25rem">Ready to Scale?</span>
+          <h2 class="cta-title">${c.headline} <span class="highlight">${c.headlineHighlight}</span></h2>
+          <p class="cta-desc">${c.description}</p>
+          <div class="cta-btns">
+            <a href="${c.btn1.href}" class="btn-primary">${c.btn1.label}</a>
+            <a href="${c.btn2.href}" class="btn-outline">${c.btn2.label}</a>
+          </div>
+        </div>
+      </div>
+    </div>`;
 }
 
 /* ─────────────────────────────────────────────────────────
