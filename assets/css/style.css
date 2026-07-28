@@ -415,6 +415,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 120px 0 80px;
   position: relative;
   border-bottom: 1px solid var(--darkGold);
