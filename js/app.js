@@ -523,7 +523,8 @@ function renderPortfolio() {
       <div class="cta-view-more text-center mt-5">
         ${
           !isPortfolioPage
-            ? `<a href="${vmbtn?.btn3?.href || "#"}" class="btn-outline">${vmbtn?.btn3?.label || "View More"}</a>`
+            ? `<a href="${vmbtn?.btn3?.href || "portfolios.html"}" class="btn-outline">
+            ${vmbtn?.btn3?.label || "View More"}</a>`
             : currentProjects < portfolio.length
               ? `<button id="loadMoreProjects" class="btn-outline">Load More</button>`
               : ""
